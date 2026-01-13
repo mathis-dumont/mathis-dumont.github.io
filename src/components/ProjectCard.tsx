@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Award } from 'lucide-react';
+import { Award } from 'lucide-react';
 import { Project } from '../data/projects';
 
 interface ProjectCardProps {

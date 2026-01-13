@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { projects, skills, currentlyLearning } from '../data/projects';
-import { getProjectSlug } from '../data/projectSlugs';
 
 export default function SinglePageHome() {
   const featuredProjects = projects.filter(p => p.category === 'featured');
@@ -26,7 +24,7 @@ export default function SinglePageHome() {
           >
             <div className="flex items-start gap-12 mb-12">
               <img
-                src="/mathis-dumont/images/profile.jpg"
+                src="/images/profile.jpg"
                 alt="Mathis Dumont"
                 className="w-32 h-32 border border-gray-900 dark:border-gray-100"
               />

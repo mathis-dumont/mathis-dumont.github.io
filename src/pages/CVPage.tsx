@@ -108,7 +108,7 @@ export default function CVPage() {
           </h2>
 
           <div className="space-y-12">
-            {academicProjects.map((project, index) => (
+            {academicProjects.map((project, _index) => (
               <div key={project.id}>
                 <h3 className="text-xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-2">
                   {project.title}
