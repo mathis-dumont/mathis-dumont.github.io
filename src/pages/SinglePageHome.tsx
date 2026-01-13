@@ -15,27 +15,27 @@ export default function SinglePageHome() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 pt-40">
-        <div className="max-w-4xl">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 py-32 pt-40">
+        <div className="max-w-4xl w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="flex items-start gap-12 mb-12">
+            <div className="flex flex-col sm:flex-row items-start gap-8 sm:gap-12 mb-12">
               <img
                 src="/images/profile.jpg"
                 alt="Mathis Dumont"
-                className="w-32 h-32 border border-gray-900 dark:border-gray-100"
+                className="w-24 h-24 sm:w-32 sm:h-32 border border-gray-900 dark:border-gray-100"
               />
-              <div className="flex-1">
-                <h1 className="text-6xl md:text-8xl font-serif font-medium text-gray-900 dark:text-gray-100 tracking-tight">
+              <div className="flex-1 min-w-0">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-medium text-gray-900 dark:text-gray-100 tracking-tight break-words">
                   Mathis Dumont
                 </h1>
               </div>
             </div>
             
-            <div className="space-y-8 text-lg md:text-xl leading-loose">
+            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg md:text-xl leading-loose">
               <p className="text-gray-900 dark:text-gray-100">
                 Bridging the gap between statistical rigor and industrial engineering.
               </p>
@@ -46,7 +46,7 @@ export default function SinglePageHome() {
               </p>
             </div>
 
-            <div className="flex gap-8 mt-16 pt-12 border-t border-gray-900 dark:border-gray-100">
+            <div className="flex flex-wrap gap-6 sm:gap-8 mt-12 sm:mt-16 pt-8 sm:pt-12 border-t border-gray-900 dark:border-gray-100">
               <a
                 href="https://github.com/mathis-dumont"
                 target="_blank"
@@ -75,7 +75,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32 px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="about" className="py-24 sm:py-32 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -83,12 +83,12 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl font-serif font-medium mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
               About
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-16"></div>
+            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
             
-            <div className="space-y-6 text-gray-900 dark:text-gray-100 leading-loose text-lg">
+            <div className="space-y-6 text-gray-900 dark:text-gray-100 leading-loose text-base sm:text-lg">
               <p>
                 I'm a dual-degree student pursuing studies at ENSAE Paris and Arts & Métiers, 
                 bridging the gap between statistical rigor and industrial engineering.
@@ -140,7 +140,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-32 px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="experience" className="py-24 sm:py-32 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -148,10 +148,10 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl font-serif font-medium mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
               Experience
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-16"></div>
+            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
 
             <div className="space-y-16">
               {/* Education */}
@@ -222,7 +222,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-32 px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="projects" className="py-24 sm:py-32 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -230,10 +230,10 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl font-serif font-medium mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
               Selected Work
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-16"></div>
+            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
 
             <div className="space-y-16">
               {featuredProjects.map((project, index) => (
@@ -346,7 +346,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* Lab Section */}
-      <section id="lab" className="py-32 px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="lab" className="py-24 sm:py-32 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -354,10 +354,10 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl font-serif font-medium mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
               Currently Learning
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-16"></div>
+            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
 
             <div className="space-y-12">
               {currentlyLearning.map((item, index) => (

@@ -31,17 +31,17 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-dark-bg border-b border-gray-100 dark:border-dark-border">
-      <div className="max-w-6xl mx-auto px-8 py-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 sm:py-6">
         <div className="flex justify-between items-center">
           <a
             href="#"
-            className="text-xl font-serif font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="text-lg sm:text-xl font-serif font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           >
             MD
           </a>
           
-          <div className="flex items-center gap-8">
-            <div className="flex gap-8">
+          <div className="flex items-center gap-4 sm:gap-8">
+            <div className="hidden md:flex gap-8">
               <a
                 href="#about"
                 className={`text-xs uppercase tracking-widest transition-colors font-sans ${
@@ -83,7 +83,11 @@ export default function Navigation() {
                 Lab
               </a>
             </div>
-
+            <div className="md:hidden flex gap-3 text-xs uppercase tracking-widest font-sans">
+              <a href="#about" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">About</a>
+              <a href="#experience" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Exp</a>
+              <a href="#projects" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Projects</a>
+            </div>
             <DarkModeToggle />
           </div>
         </div>
