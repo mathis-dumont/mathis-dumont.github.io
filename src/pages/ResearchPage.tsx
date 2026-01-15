@@ -51,7 +51,7 @@ export default function ResearchPage() {
               <ul className="space-y-4 mb-8">
                 {project.highlights.map((highlight, i) => (
                   <li key={i} className="text-gray-600 dark:text-gray-400 leading-relaxed flex">
-                    <span className="mr-3 text-gray-400">—</span>
+                    <span className="mr-3 text-gray-400">-</span>
                     <span>{highlight}</span>
                   </li>
                 ))}
