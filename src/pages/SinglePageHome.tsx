@@ -59,7 +59,7 @@ export default function SinglePageHome() {
               </div>
             </div>
             
-            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg md:text-xl leading-loose">
+            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg leading-loose">
               <p className="text-gray-900 dark:text-gray-100 max-w-2xl">
                 I'm a dual-degree student at ENSAE Paris and Arts & Métiers, working at the intersection of statistics and industrial engineering. I focus on building AI systems that work in the real world, with particular interest in agentic frameworks and retrieval-augmented generation.
               </p>
