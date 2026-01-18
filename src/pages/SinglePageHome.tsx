@@ -15,7 +15,7 @@ export default function SinglePageHome() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 py-32 pt-40">
+      <section className="flex items-center justify-center px-4 sm:px-8 pb-4 pt-40">
         <div className="max-w-4xl w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -58,12 +58,6 @@ export default function SinglePageHome() {
                 </div>
               </div>
             </div>
-            
-            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg leading-loose">
-              <p className="text-gray-900 dark:text-gray-100 max-w-2xl">
-                I'm a dual-degree student at ENSAE Paris and Arts & Métiers, working at the intersection of statistics and industrial engineering. I focus on building AI systems that work in the real world, with particular interest in agentic frameworks and retrieval-augmented generation.
-              </p>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -84,6 +78,9 @@ export default function SinglePageHome() {
             
             <div className="space-y-6 text-gray-900 dark:text-gray-100 leading-loose text-base sm:text-lg">
               <p>
+                I'm a dual-degree student at ENSAE Paris and Arts & Métiers, working at the intersection of statistics and industrial engineering. I focus on building AI systems that work in the real world, with particular interest in agentic frameworks and retrieval-augmented generation.
+              </p>
+              <p>
                 I am currently pursuing a dual degree at ENSAE Paris and Arts & Métiers, combining statistical methods with industrial engineering. My academic work brings together the rigor of mathematical foundations with practical implementation challenges.
               </p>
               <p>
@@ -93,35 +90,187 @@ export default function SinglePageHome() {
                 Beyond technical work, I served as Head of Sales at Arts & Métiers Junior Enterprise, where I led client relationships and managed cross-functional teams. This role helped me develop skills in leadership and project management while delivering engineering solutions to industry partners like Westinghouse and startups like Iridesense.
               </p>
             </div>
+          </motion.div>
+        </div>
+      </section>
 
-            <div className="mt-20">
+      {/* Projects Section */}
+      <section id="projects" className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
+              Selected Work
+            </h2>
+            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
+
+            <div className="space-y-16">
+              {featuredProjects.map((project, index) => (
+                <motion.article
+                  key={project.id}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="border-b border-gray-900 dark:border-gray-100 pb-16 last:border-0"
+                >
+                  <h3 className="text-2xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-4">
+                    {project.title}
+                  </h3>
+
+                  {(project.github || project.demo || project.pdf || project.video) && (
+                    <div className="flex gap-6 text-sm font-sans mb-6">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                        >
+                          View Code →
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                        >
+                          Live Demo →
+                        </a>
+                      )}
+                      {project.pdf && (
+                        <a
+                          href={project.pdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                        >
+                          Read Paper →
+                        </a>
+                      )}
+                      {project.video && (
+                        <a
+                          href={project.video}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                        >
+                          Watch Demo →
+                        </a>
+                      )}
+                    </div>
+                  )}
+
+                  <p className="text-gray-900 dark:text-gray-100 leading-loose mb-6">
+                    {project.description}
+                  </p>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {project.highlights.map((highlight, i) => (
+                      <li key={i} className="text-gray-900 dark:text-gray-100 leading-relaxed flex">
+                        <span className="mr-3 text-gray-500 dark:text-gray-500">-</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs font-sans text-gray-900 dark:text-gray-100 border border-gray-900 dark:border-gray-100 px-3 py-1"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {project.video && (
+                    <div className="mb-12 mt-8 w-full aspect-video bg-gray-100 dark:bg-gray-900 rounded-none overflow-hidden">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={project.video}
+                        title={project.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  )}
+                </motion.article>
+              ))}
+            </div>
+
+            {/* Academic Projects */}
+            <div className="mt-24 pt-24 border-t border-gray-900 dark:border-gray-100">
               <h3 className="text-3xl font-serif font-medium mb-12 text-gray-900 dark:text-gray-100">
-                Expertise
+                Academic Research
               </h3>
 
-              <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
-                {skillCategories.map((category, index) => (
-                  <motion.div
-                    key={category.title}
+              <div className="space-y-16">
+                {academicProjects.map((project, index) => (
+                  <motion.article
+                    key={project.id}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
+                    className="border-b border-gray-900 dark:border-gray-100 pb-16 last:border-0"
                   >
-                    <h4 className="text-lg font-serif font-medium mb-6 text-gray-900 dark:text-gray-100 uppercase tracking-wider text-sm">
-                      {category.title}
+                    <h4 className="text-2xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-4">
+                      {project.title}
                     </h4>
-                    <ul className="space-y-3">
-                      {category.items.map((skill) => (
-                        <li
-                          key={skill}
-                          className="text-gray-900 dark:text-gray-100 leading-relaxed"
+                    {project.award && (
+                      <p className="text-gray-900 dark:text-gray-100 italic mb-4">
+                        {project.award}
+                      </p>
+                    )}
+                    <p className="text-gray-900 dark:text-gray-100 leading-loose mb-6">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-3 mb-6">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs font-sans text-gray-900 dark:text-gray-100 border border-gray-900 dark:border-gray-100 px-3 py-1"
                         >
-                          {skill}
-                        </li>
+                          {tag}
+                        </span>
                       ))}
-                    </ul>
-                  </motion.div>
+                    </div>
+
+                    {(project.github || project.pdf) && (
+                      <div className="flex gap-6 text-sm font-sans">
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                          >
+                            View Code →
+                          </a>
+                        )}
+                        {project.pdf && (
+                          <a
+                            href={project.pdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                          >
+                            Read Paper →
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </motion.article>
                 ))}
               </div>
             </div>
@@ -129,7 +278,7 @@ export default function SinglePageHome() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* CV / Experience Section */}
       <section id="experience" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -353,131 +502,7 @@ export default function SinglePageHome() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
-              Selected Work
-            </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
-
-            <div className="space-y-16">
-              {featuredProjects.map((project, index) => (
-                <motion.article
-                  key={project.id}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="border-b border-gray-900 dark:border-gray-100 pb-16 last:border-0"
-                >
-                  <h3 className="text-2xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-4">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-900 dark:text-gray-100 leading-loose mb-6">
-                    {project.description}
-                  </p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {project.highlights.map((highlight, i) => (
-                      <li key={i} className="text-gray-900 dark:text-gray-100 leading-relaxed flex">
-                        <span className="mr-3 text-gray-500 dark:text-gray-500">-</span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs font-sans text-gray-900 dark:text-gray-100 border border-gray-900 dark:border-gray-100 px-3 py-1"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {(project.github || project.demo) && (
-                    <div className="flex gap-6 text-sm font-sans">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-                        >
-                          View Code →
-                        </a>
-                      )}
-                      {project.demo && (
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
-                        >
-                          Live Demo →
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </motion.article>
-              ))}
-            </div>
-
-            {/* Academic Projects */}
-            <div className="mt-24 pt-24 border-t border-gray-900 dark:border-gray-100">
-              <h3 className="text-3xl font-serif font-medium mb-12 text-gray-900 dark:text-gray-100">
-                Academic Research
-              </h3>
-
-              <div className="space-y-16">
-                {academicProjects.map((project, index) => (
-                  <motion.article
-                    key={project.id}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="border-b border-gray-900 dark:border-gray-100 pb-16 last:border-0"
-                  >
-                    <h4 className="text-2xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-4">
-                      {project.title}
-                    </h4>
-                    {project.award && (
-                      <p className="text-gray-900 dark:text-gray-100 italic mb-4">
-                        {project.award}
-                      </p>
-                    )}
-                    <p className="text-gray-900 dark:text-gray-100 leading-loose mb-6">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-3">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs font-sans text-gray-900 dark:text-gray-100 border border-gray-900 dark:border-gray-100 px-3 py-1"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </motion.article>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Lab Section */}
+      {/* Lab / Currently Learning Section */}
       <section id="lab" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div

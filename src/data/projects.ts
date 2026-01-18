@@ -7,90 +7,99 @@ export interface Project {
   highlights: string[];
   github?: string;
   demo?: string;
+  pdf?: string;
+  video?: string;
   award?: string;
 }
 
 export const projects: Project[] = [
-  // Featured Projects
+  // Featured Projects - LLM/AI Focus
   {
     id: 1,
-    title: "Multi-Agent Fortran Modernizer",
+    title: "Multi-Agent Documentation System",
     category: "featured",
-    description: "Agentic orchestration system using Mistral and LangGraph to automatically modernize legacy Fortran codebases through intelligent code analysis and transformation.",
-    tags: ["LangGraph", "Mistral AI", "Multi-Agent", "Code Modernization"],
+    description: "Advanced multi-agent AI system leveraging Mistral's reasoning capabilities to automatically generate comprehensive documentation for any codebase. Agents coordinate through ReAct framework with tool-use for code analysis, generating interactive diagrams, dependency maps, and knowledge graphs.",
+    tags: ["Multi-Agent", "Mistral AI", "ReAct", "Tool-Use", "Flask", "NetworkX"],
     highlights: [
-      "Orchestrated multiple specialized agents for parsing, analysis, and refactoring",
-      "Automated migration of legacy Fortran 77 to modern Fortran standards",
-      "Integrated LLM-powered code understanding and transformation"
+      "Multi-agent orchestration: Analyzer, Architect, and Synthesizer agents coordinate via ReAct for code understanding",
+      "Intelligent tool-use: agents leverage code parsing, graph analysis, and LLM reasoning tools for accurate insights",
+      "5-stage agentic pipeline: structured extraction → dependency reasoning → architectural analysis → synthesis",
+      "Multi-language support (Python, JS/TS, Java, C/C++, Fortran, Go, Rust) with streaming responses and real-time reasoning display"
     ],
-    github: "https://github.com/mathis-dumont/fortran-modernizer"
+    github: "https://github.com/mathis-dumont/documentation_generator",
+    video: "https://www.youtube.com/embed/O5LUEzxQzFA"
   },
   {
     id: 2,
-    title: "Advanced RAG System",
+    title: "Steam Reviews NLP: Fine-tuning vs Prompting",
     category: "featured",
-    description: "Production-ready Retrieval-Augmented Generation system implementing hybrid search strategies and reranking algorithms for enhanced contextual accuracy.",
-    tags: ["RAG", "Embeddings", "Reranking", "Hybrid Search", "LLM"],
+    description: "Comprehensive research on LLM generation quality comparing zero-shot prompting, detailed prompt engineering, and parameter-efficient fine-tuning on TinyLlama 1.1B. Key finding: explicit constraints paradoxically degrade quality; fine-tuning achieves 34% improvement in factual accuracy with 87.67% validation agreement.",
+    tags: ["TinyLlama", "LoRA", "Fine-tuning", "LLM-as-a-Judge", "Mistral", "SBERT"],
     highlights: [
-      "Implemented semantic + keyword hybrid search",
-      "Cross-encoder reranking for precision improvements",
-      "Optimized chunking strategies and context window management"
+      "Rigorous dual-validation: SBERT classifier (87.67% agreement with expert Mistral judge) on 300+ reviews",
+      "Counterintuitive finding: fine-tuning achieves 31% hallucination rate vs 65% with detailed prompts—prompt constraints force factually incorrect details",
+      "Scalable evaluation framework: hallucination detection, diversity metrics (n-gram, embeddings), realism scoring across 20K+ generated reviews",
+      "End-to-end ML pipeline from Steam API collection to GPU training (Google Colab) to multi-method evaluation"
     ],
-    github: "https://github.com/mathis-dumont/advanced-rag"
+    github: "https://github.com/mlang789/steam-project"
   },
   {
     id: 3,
-    title: "Steam Reviews NLP: Fine-tuning vs Prompting",
+    title: "Horse Racing Prediction Platform",
     category: "featured",
-    description: "Comparative study of TinyLlama fine-tuning with LoRA versus prompt engineering for sentiment analysis, using LLM-as-a-judge for evaluation.",
-    tags: ["TinyLlama", "LoRA", "Fine-tuning", "Prompt Engineering", "LLM-as-a-judge"],
+    description: "Production-grade ML platform for horse racing predictions with microservices architecture. Features automated daily ETL via GitHub Actions CRON, XGBoost modeling, Value Betting module, and dual interfaces (FastAPI + Streamlit).",
+    tags: ["XGBoost", "Streamlit", "FastAPI", "Supabase", "GitHub Actions", "Docker", "ETL"],
     highlights: [
-      "Fine-tuned TinyLlama using LoRA on Steam reviews dataset",
-      "Benchmarked against few-shot prompt engineering approaches",
-      "Implemented LLM-based evaluation framework for quality assessment"
+      "Automated daily data ingestion via GitHub Actions CRON to Supabase PostgreSQL",
+      "'Sniper' Value Betting module: AI vs market comparison for positive edge detection",
+      "Microservices architecture: multithreaded ETL, model serving, Streamlit dashboard",
+      "Makefile orchestration for seamless Docker deployment and pipeline execution"
     ],
-    github: "https://github.com/mathis-dumont/steam-nlp"
+    github: "https://github.com/mathis-dumont/horse-racing-prediction"
   },
   {
     id: 4,
-    title: "Horse Racing Prediction System",
+    title: "Multimodal RAG System",
     category: "featured",
-    description: "End-to-end ML production system for horse racing outcome prediction with XGBoost, featuring full MLOps pipeline and containerized deployment.",
-    tags: ["XGBoost", "Docker", "FastAPI", "PostgreSQL", "GitHub Actions", "MLOps"],
+    description: "Production-ready multimodal RAG system processing text and images from technical documentation, featuring AI-powered vision understanding, semantic chunking with spaCy, and incremental FAISS indexing. Demonstrates sophisticated retrieval techniques with source attribution.",
+    tags: ["Multimodal RAG", "Mistral Vision", "FAISS", "spaCy", "Streamlit", "PyMuPDF"],
     highlights: [
-      "XGBoost model with feature engineering from historical racing data",
-      "FastAPI serving layer with PostgreSQL for predictions storage",
-      "CI/CD pipeline with automated testing and Docker deployment"
+      "True multimodal processing: Mistral Vision API generates image descriptions integrated into semantic search for visual content retrieval",
+      "Semantic chunking with spaCy NLP and contextual window retrieval for coherent LLM responses",
+      "Incremental knowledge base management with automatic document conversion (Word→PDF) and deduplication",
+      "Production-grade optimizations: FAISS IndexFlatIP, source traceability with document citations"
     ],
-    github: "https://github.com/mathis-dumont/horse-racing-ml"
+    github: "https://github.com/mathis-dumont/advanced-rag"
   },
 
   // Academic/Research Projects
   {
     id: 5,
-    title: "Fraud Detection with Autoencoders",
+    title: "Fraud Detection in Imbalanced Datasets",
     category: "academic",
-    description: "Deep learning approach to credit card fraud detection using autoencoders to handle severely imbalanced datasets through anomaly detection.",
-    tags: ["Autoencoders", "Anomaly Detection", "Imbalanced Learning", "PyTorch"],
+    description: "Research investigation of fraud detection methodologies for highly imbalanced credit card transactions. Rigorous comparative analysis of classical supervised classifiers (Logistic Regression, XGBoost), unsupervised autoencoders for anomaly detection, and cost-sensitive thresholding strategies aligned with economic utility.",
+    tags: ["Autoencoders", "XGBoost", "Logistic Regression", "Cost-Sensitive Learning", "Anomaly Detection"],
     highlights: [
-      "Designed autoencoder architecture for reconstruction-based anomaly scoring",
-      "Addressed class imbalance (0.17% fraud rate) without oversampling",
-      "Achieved high precision while maintaining recall on minority class"
+      "Multi-methodology comparison: evaluated Logistic Regression, XGBoost, and autoencoder-based anomaly detection on 0.17% fraud rate dataset",
+      "Theoretical framework: explored undersampling bias implications and cost-sensitive decision thresholding for business-aligned performance",
+      "Autoencoder anomaly detection: reconstruction-based scoring for imbalanced learning without synthetic oversampling",
+      "Technical research paper with comprehensive statistical analysis and economic utility optimization"
     ],
-    github: "https://github.com/mathis-dumont/fraud-detection"
+    pdf: "/documents/fraud-detection-report.pdf"
   },
   {
     id: 6,
     title: "IoT Smart Beehive System",
     category: "academic",
-    description: "Award-winning embedded IoT system for real-time beehive monitoring with custom sensors and edge computing capabilities.",
-    tags: ["IoT", "Embedded Systems", "Arduino", "Sensors", "Edge Computing"],
+    description: "Award-winning automated remote monitoring system for beehive management. Measures critical parameters (temperature, humidity, hive mass) to optimize bee colony conditions and detect swarming events. Provides beekeepers with real-time remote data access and automated alerts via LoRaWAN.",
+    tags: ["IoT", "Embedded Systems", "ESP8266", "LoRaWAN", "Sensors", "Remote Monitoring"],
     highlights: [
-      "Integrated temperature, humidity, and weight sensors with Arduino",
-      "Real-time data transmission and dashboard visualization",
-      "Won engineering innovation award at Arts & Métiers"
+      "Multi-sensor integration: temperature, humidity, and weight sensors for comprehensive hive health monitoring",
+      "Swarming detection through mass measurement analysis to alert beekeepers of colony activity",
+      "LoRaWAN connectivity for long-range, low-power remote data transmission",
+      "2nd Prize winner at 12th Trinational Congress of Natural Sciences and Technology"
     ],
-    award: "Arts & Métiers Innovation Award 2024"
+    award: "2nd Prize - 12th Trinational Congress of Natural Sciences and Technology"
   }
 ];
 

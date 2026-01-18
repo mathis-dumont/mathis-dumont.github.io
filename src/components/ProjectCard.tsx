@@ -70,6 +70,26 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             Live Demo →
           </a>
         )}
+        {project.pdf && (
+          <a
+            href={project.pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-300 transition-colors"
+          >
+            Read Paper →
+          </a>
+        )}
+        {project.video && (
+          <a
+            href={project.video}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-300 transition-colors"
+          >
+            Watch Demo →
+          </a>
+        )}
       </div>
     </motion.article>
   );

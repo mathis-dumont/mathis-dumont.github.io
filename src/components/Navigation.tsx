@@ -53,16 +53,6 @@ export default function Navigation() {
                 About
               </a>
               <a
-                href="#experience"
-                className={`text-xs uppercase tracking-widest transition-colors font-sans ${
-                  isActive('experience')
-                    ? 'text-gray-900 dark:text-gray-100'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
-                }`}
-              >
-                CV
-              </a>
-              <a
                 href="#projects"
                 className={`text-xs uppercase tracking-widest transition-colors font-sans ${
                   isActive('projects')
@@ -71,6 +61,16 @@ export default function Navigation() {
                 }`}
               >
                 Projects
+              </a>
+              <a
+                href="#experience"
+                className={`text-xs uppercase tracking-widest transition-colors font-sans ${
+                  isActive('experience')
+                    ? 'text-gray-900 dark:text-gray-100'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
+                }`}
+              >
+                CV
               </a>
               <a
                 href="#lab"
@@ -85,8 +85,8 @@ export default function Navigation() {
             </div>
             <div className="md:hidden flex gap-3 text-xs uppercase tracking-widest font-sans">
               <a href="#about" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">About</a>
-              <a href="#experience" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">CV</a>
               <a href="#projects" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">Projects</a>
+              <a href="#experience" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">CV</a>
             </div>
             <DarkModeToggle />
           </div>
