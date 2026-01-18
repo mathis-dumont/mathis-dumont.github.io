@@ -19,10 +19,10 @@ export default function SinglePageHome() {
               <img
                 src="/images/profile.jpg"
                 alt="Mathis Dumont"
-                className="w-24 h-24 sm:w-32 sm:h-32 border border-gray-900 dark:border-gray-100"
+                className="w-24 h-24 sm:w-32 sm:h-32 border border-light-border dark:border-dark-border"
               />
               <div className="flex-1 min-w-0">
-                <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-medium text-gray-900 dark:text-gray-100 tracking-tight break-words mb-6">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-medium text-light-text dark:text-dark-text tracking-tight break-words mb-6">
                   Mathis Dumont
                 </h1>
                 <div className="flex flex-wrap gap-6">
@@ -30,7 +30,7 @@ export default function SinglePageHome() {
                     href="https://github.com/mathis-dumont"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors text-sm font-sans"
+                    className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors text-sm font-sans"
                   >
                     GitHub
                   </a>
@@ -38,13 +38,13 @@ export default function SinglePageHome() {
                     href="https://linkedin.com/in/mathis-dumont"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors text-sm font-sans"
+                    className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors text-sm font-sans"
                   >
                     LinkedIn
                   </a>
                   <a
                     href="mailto:mathis.dumont@example.com"
-                    className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors text-sm font-sans"
+                    className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors text-sm font-sans"
                   >
                     Email
                   </a>
@@ -56,7 +56,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="about" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-light-border dark:border-dark-border scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -64,17 +64,14 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-light-text dark:text-dark-text text-center">
               About
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
+            <div className="w-16 h-px bg-light-text dark:bg-dark-text mx-auto mb-12 sm:mb-16"></div>
             
-            <div className="space-y-6 text-gray-900 dark:text-gray-100 leading-loose text-base sm:text-lg">
+            <div className="space-y-6 text-light-text dark:text-dark-text leading-loose text-base sm:text-lg">
               <p>
-                I'm a dual-degree student at ENSAE Paris and Arts & Métiers, working at the intersection of statistics and industrial engineering. I focus on building AI systems that work in the real world, with particular interest in agentic frameworks and retrieval-augmented generation.
-              </p>
-              <p>
-                I am currently pursuing a dual degree at ENSAE Paris and Arts & Métiers, combining statistical methods with industrial engineering. My academic work brings together the rigor of mathematical foundations with practical implementation challenges.
+                Welcome! I'm Mathis, an engineer passionate about building AI systems that work in the real world. After my engineering degree in Arts et Métiers, I'm pursuing a Master of Data Science at ENSAE. My academic work brings together the rigor of mathematical foundations with practical implementation challenges.
               </p>
               <p>
                 My focus is on building AI systems that can be deployed in real-world settings. I work with agentic frameworks and retrieval-augmented generation architectures, and I'm particularly interested in how theoretical advances can be translated into production-ready solutions. Through internships at ArcelorMittal and other companies, I've worked on applying machine learning to industrial problems, from defect prediction in steel manufacturing to developing enterprise resource planning systems.
@@ -88,7 +85,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="projects" className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-8 border-t border-light-border dark:border-dark-border scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -96,10 +93,10 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-light-text dark:text-dark-text text-center">
               Selected Work
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
+            <div className="w-16 h-px bg-light-text dark:bg-dark-text mx-auto mb-12 sm:mb-16"></div>
 
             <div className="space-y-16">
               {featuredProjects.map((project, index) => (
@@ -109,11 +106,24 @@ export default function SinglePageHome() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="border-b border-gray-900 dark:border-gray-100 pb-16 last:border-0"
+                  className="border-b border-light-border dark:border-dark-border pb-16 last:border-0"
                 >
-                  <h3 className="text-2xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-4">
+                  <h3 className="text-2xl font-serif font-medium text-light-text dark:text-dark-text mb-4">
                     {project.title}
                   </h3>
+
+                  <p className="text-light-text dark:text-dark-text leading-loose mb-6">
+                    {project.description}
+                  </p>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {project.highlights.map((highlight, i) => (
+                      <li key={i} className="text-light-text dark:text-dark-text leading-relaxed flex">
+                        <span className="mr-3 text-light-muted dark:text-dark-muted">-</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
 
                   {(project.github || project.demo || project.pdf || project.video) && (
                     <div className="flex gap-6 text-sm font-sans mb-6">
@@ -122,7 +132,7 @@ export default function SinglePageHome() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                          className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors"
                         >
                           View Code →
                         </a>
@@ -132,7 +142,7 @@ export default function SinglePageHome() {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                          className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors"
                         >
                           Live Demo →
                         </a>
@@ -142,7 +152,7 @@ export default function SinglePageHome() {
                           href={project.pdf}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                          className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors"
                         >
                           Read Paper →
                         </a>
@@ -152,7 +162,7 @@ export default function SinglePageHome() {
                           href={project.video}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                          className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors"
                         >
                           Watch Demo →
                         </a>
@@ -160,24 +170,11 @@ export default function SinglePageHome() {
                     </div>
                   )}
 
-                  <p className="text-gray-900 dark:text-gray-100 leading-loose mb-6">
-                    {project.description}
-                  </p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {project.highlights.map((highlight, i) => (
-                      <li key={i} className="text-gray-900 dark:text-gray-100 leading-relaxed flex">
-                        <span className="mr-3 text-gray-500 dark:text-gray-500">-</span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-
                   <div className="flex flex-wrap gap-3 mb-6">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs font-sans text-gray-900 dark:text-gray-100 border border-gray-900 dark:border-gray-100 px-3 py-1"
+                        className="text-xs font-sans text-light-text dark:text-dark-text border border-light-border dark:border-dark-border px-3 py-1"
                       >
                         {tag}
                       </span>
@@ -185,7 +182,7 @@ export default function SinglePageHome() {
                   </div>
 
                   {project.video && (
-                    <div className="mb-12 mt-8 w-full aspect-video bg-gray-100 dark:bg-gray-900 rounded-none overflow-hidden">
+                    <div className="mb-12 mt-8 w-full aspect-video bg-light-surface dark:bg-dark-surface rounded-none overflow-hidden">
                       <iframe
                         width="100%"
                         height="100%"
@@ -202,8 +199,8 @@ export default function SinglePageHome() {
             </div>
 
             {/* Academic Projects */}
-            <div className="mt-24 pt-24 border-t border-gray-900 dark:border-gray-100">
-              <h3 className="text-3xl font-serif font-medium mb-12 text-gray-900 dark:text-gray-100">
+            <div className="mt-24 pt-24 border-t border-light-border dark:border-dark-border">
+              <h3 className="text-3xl font-serif font-medium mb-12 text-light-text dark:text-dark-text">
                 Academic Research
               </h3>
 
@@ -215,38 +212,28 @@ export default function SinglePageHome() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="border-b border-gray-900 dark:border-gray-100 pb-16 last:border-0"
+                    className="border-b border-light-border dark:border-dark-border pb-16 last:border-0"
                   >
-                    <h4 className="text-2xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-4">
+                    <h4 className="text-2xl font-serif font-medium text-light-text dark:text-dark-text mb-4">
                       {project.title}
                     </h4>
                     {project.award && (
-                      <p className="text-gray-900 dark:text-gray-100 italic mb-4">
+                      <p className="text-light-text dark:text-dark-text italic mb-4">
                         {project.award}
                       </p>
                     )}
-                    <p className="text-gray-900 dark:text-gray-100 leading-loose mb-6">
+                    <p className="text-light-text dark:text-dark-text leading-loose mb-6">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-3 mb-6">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs font-sans text-gray-900 dark:text-gray-100 border border-gray-900 dark:border-gray-100 px-3 py-1"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
 
                     {(project.github || project.pdf) && (
-                      <div className="flex gap-6 text-sm font-sans">
+                      <div className="flex gap-6 text-sm font-sans mb-6">
                         {project.github && (
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                            className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors"
                           >
                             View Code →
                           </a>
@@ -256,13 +243,24 @@ export default function SinglePageHome() {
                             href={project.pdf}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+                            className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors"
                           >
                             Read Paper →
                           </a>
                         )}
                       </div>
                     )}
+
+                    <div className="flex flex-wrap gap-3">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs font-sans text-light-text dark:text-dark-text border border-light-border dark:border-dark-border px-3 py-1"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </motion.article>
                 ))}
               </div>
@@ -272,7 +270,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* CV / Experience Section */}
-      <section id="experience" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="experience" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-light-border dark:border-dark-border scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -280,32 +278,32 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-light-text dark:text-dark-text text-center">
               CV
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
+            <div className="w-16 h-px bg-light-text dark:bg-dark-text mx-auto mb-12 sm:mb-16"></div>
 
             <div className="space-y-16">
               {/* Education */}
               <div>
-                <h3 className="text-2xl font-serif font-medium mb-8 text-gray-900 dark:text-gray-100 uppercase tracking-wider text-sm">
+                <h3 className="text-2xl font-serif font-medium mb-8 text-light-text dark:text-dark-text uppercase tracking-wider text-sm">
                   Education
                 </h3>
                 
                 <div className="space-y-8">
-                  <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                  <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                         Master's Degree in Data Science
                       </h4>
-                      <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         2025 - 2026
                       </p>
                     </div>
-                    <p className="text-gray-900 dark:text-gray-100 mb-4">
+                    <p className="text-light-text dark:text-dark-text mb-4">
                       ENSAE Paris
                     </p>
-                    <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
                         <span>Main courses: Deep Learning, Natural Language Processing, Reinforcement Learning, Optimal Transport</span>
@@ -313,19 +311,19 @@ export default function SinglePageHome() {
                     </ul>
                   </div>
 
-                  <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                  <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                         Master of Engineering
                       </h4>
-                      <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         2022 - 2025
                       </p>
                     </div>
-                    <p className="text-gray-900 dark:text-gray-100 mb-4">
+                    <p className="text-light-text dark:text-dark-text mb-4">
                       Arts & Métiers ParisTech, Metz
                     </p>
-                    <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
                         <span>Main courses: Probability, Statistics, Computer Science, Optimization, Mechanics, Energy Systems, Manufacturing</span>
@@ -337,19 +335,19 @@ export default function SinglePageHome() {
                     </ul>
                   </div>
 
-                  <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                  <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                         Exchange Semester
                       </h4>
-                      <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         2024 - 2025
                       </p>
                     </div>
-                    <p className="text-gray-900 dark:text-gray-100 mb-4">
+                    <p className="text-light-text dark:text-dark-text mb-4">
                       Politecnico di Milano, Milan, Italy
                     </p>
-                    <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
                         <span>Main courses: Machine Learning, Optimization, Lean Management</span>
@@ -357,19 +355,19 @@ export default function SinglePageHome() {
                     </ul>
                   </div>
 
-                  <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                  <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                         Preparatory Classes
                       </h4>
-                      <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         2020 - 2022
                       </p>
                     </div>
-                    <p className="text-gray-900 dark:text-gray-100 mb-4">
+                    <p className="text-light-text dark:text-dark-text mb-4">
                       Lycée Jean Baptiste Say, Paris
                     </p>
-                    <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
                         <span>Two-year intensive program in Mathematics, Physics, and Engineering Sciences, preparing for national competitive entrance exams to top engineering schools</span>
@@ -381,24 +379,24 @@ export default function SinglePageHome() {
 
               {/* Professional Experience */}
               <div>
-                <h3 className="text-2xl font-serif font-medium mb-8 text-gray-900 dark:text-gray-100 uppercase tracking-wider text-sm">
+                <h3 className="text-2xl font-serif font-medium mb-8 text-light-text dark:text-dark-text uppercase tracking-wider text-sm">
                   Professional
                 </h3>
 
                 <div className="space-y-12">
-                  <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                  <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                         Data Scientist Intern
                       </h4>
-                      <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         Jan. 2025 - Jul. 2025
                       </p>
                     </div>
-                    <p className="text-gray-900 dark:text-gray-100 mb-4">
+                    <p className="text-light-text dark:text-dark-text mb-4">
                       ArcelorMittal, Simulation and Modeling Department
                     </p>
-                    <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
                         <span>Developed and evaluated regression and classification models to predict and categorize defects on steel sheets after hot rolling</span>
@@ -410,19 +408,19 @@ export default function SinglePageHome() {
                     </ul>
                   </div>
 
-                  <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                  <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                         Software Engineer Intern
                       </h4>
-                      <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         Jun. 2024 - Sept. 2024
                       </p>
                     </div>
-                    <p className="text-gray-900 dark:text-gray-100 mb-4">
+                    <p className="text-light-text dark:text-dark-text mb-4">
                       Utilys, Mulhouse
                     </p>
-                    <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
                         <span>Redesigned and developed the production and sales tracking system (ERP) through a web application</span>
@@ -430,19 +428,19 @@ export default function SinglePageHome() {
                     </ul>
                   </div>
 
-                  <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                  <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                         Analyst Intern
                       </h4>
-                      <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         Jun. 2023 - Jul. 2023
                       </p>
                     </div>
-                    <p className="text-gray-900 dark:text-gray-100 mb-4">
+                    <p className="text-light-text dark:text-dark-text mb-4">
                       EIFFAGE, Fessenheim
                     </p>
-                    <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
                         <span>Process optimization and maintenance scheduling for industrial equipment</span>
@@ -454,23 +452,23 @@ export default function SinglePageHome() {
 
               {/* Volunteering */}
               <div>
-                <h3 className="text-2xl font-serif font-medium mb-8 text-gray-900 dark:text-gray-100 uppercase tracking-wider text-sm">
+                <h3 className="text-2xl font-serif font-medium mb-8 text-light-text dark:text-dark-text uppercase tracking-wider text-sm">
                   Volunteering
                 </h3>
 
-                <div className="border-l border-gray-900 dark:border-gray-100 pl-8">
+                <div className="border-l border-light-border dark:border-dark-border pl-8">
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="text-xl font-serif text-gray-900 dark:text-gray-100">
+                    <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
                       Head of Sales
                     </h4>
-                    <p className="text-gray-500 dark:text-gray-500 text-sm font-sans ml-4 whitespace-nowrap">
+                    <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                       Feb. 2023 - Jun. 2025
                     </p>
                   </div>
-                  <p className="text-gray-900 dark:text-gray-100 mb-4">
+                  <p className="text-light-text dark:text-dark-text mb-4">
                     Arts & Métiers Junior Enterprise (AMJE)
                   </p>
-                  <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
+                  <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                     <li className="flex">
                       <span className="mr-3">-</span>
                       <span>Developed maintenance solutions for steam generators for Westinghouse France</span>
@@ -496,7 +494,7 @@ export default function SinglePageHome() {
       </section>
 
       {/* Lab / Currently Learning Section */}
-      <section id="lab" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-gray-900 dark:border-gray-100 scroll-mt-24">
+      <section id="lab" className="py-16 sm:py-20 px-4 sm:px-8 border-t border-light-border dark:border-dark-border scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -504,10 +502,10 @@ export default function SinglePageHome() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-gray-900 dark:text-gray-100 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium mb-12 sm:mb-16 text-light-text dark:text-dark-text text-center">
               Currently Learning
             </h2>
-            <div className="w-16 h-px bg-gray-900 dark:bg-gray-100 mx-auto mb-12 sm:mb-16"></div>
+            <div className="w-16 h-px bg-light-text dark:bg-dark-text mx-auto mb-12 sm:mb-16"></div>
 
             <div className="space-y-12">
               {currentlyLearning.map((item, index) => (
@@ -517,12 +515,12 @@ export default function SinglePageHome() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="border-l border-gray-900 dark:border-gray-100 pl-8"
+                  className="border-l border-light-border dark:border-dark-border pl-8"
                 >
-                  <h3 className="text-xl font-serif text-gray-900 dark:text-gray-100 mb-2">
+                  <h3 className="text-xl font-serif text-light-text dark:text-dark-text mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-900 dark:text-gray-100 font-sans text-sm">
+                  <p className="text-light-text dark:text-dark-text font-sans text-sm">
                     {item.source}
                   </p>
                 </motion.div>

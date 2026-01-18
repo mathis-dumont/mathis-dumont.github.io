@@ -38,18 +38,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         ))}
       </ul>
 
-      <div className="flex flex-wrap gap-3 mb-6">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs font-sans text-gray-500 dark:text-gray-500 border border-gray-300 dark:border-gray-700 px-3 py-1"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex gap-6 text-sm font-sans">
+      <div className="flex gap-6 text-sm font-sans mb-6">
         {project.github && (
           <a
             href={project.github}
@@ -90,6 +79,17 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             Watch Demo →
           </a>
         )}
+      </div>
+
+      <div className="flex flex-wrap gap-3">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="text-xs font-sans text-gray-500 dark:text-gray-500 border border-gray-300 dark:border-gray-700 px-3 py-1"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
     </motion.article>
   );

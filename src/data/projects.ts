@@ -37,7 +37,7 @@ export const projects: Project[] = [
     tags: ["TinyLlama", "LoRA", "Fine-tuning", "LLM-as-a-Judge", "Mistral", "SBERT"],
     highlights: [
       "Rigorous dual-validation: SBERT classifier (87.67% agreement with expert Mistral judge) on 300+ reviews",
-      "Counterintuitive finding: fine-tuning achieves 31% hallucination rate vs 65% with detailed prompts—prompt constraints force factually incorrect details",
+      "Counterintuitive finding: fine-tuning achieves 31% hallucination rate vs 65% with detailed prompts-prompt constraints force factually incorrect details on tiny LLMs",
       "Scalable evaluation framework: hallucination detection, diversity metrics (n-gram, embeddings), realism scoring across 20K+ generated reviews",
       "End-to-end ML pipeline from Steam API collection to GPU training (Google Colab) to multi-method evaluation"
     ],

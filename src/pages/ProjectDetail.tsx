@@ -66,6 +66,33 @@ export default function ProjectDetail() {
             </ul>
           </div>
 
+          {(project.github || project.demo) && (
+            <div className="mb-16 pb-16 border-b border-gray-200 dark:border-gray-800">
+              <div className="flex gap-8 text-sm font-sans">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
+                  >
+                    View on GitHub →
+                  </a>
+                )}
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
+                  >
+                    Live Demo →
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
           <div className="mb-16 pb-16 border-b border-gray-200 dark:border-gray-800">
             <h2 className="text-2xl font-serif font-medium mb-8 text-gray-900 dark:text-gray-100">
               Technologies
@@ -81,31 +108,6 @@ export default function ProjectDetail() {
               ))}
             </div>
           </div>
-
-          {(project.github || project.demo) && (
-            <div className="flex gap-8 text-sm font-sans">
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
-                >
-                  View on GitHub →
-                </a>
-              )}
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
-                >
-                  Live Demo →
-                </a>
-              )}
-            </div>
-          )}
         </motion.div>
       </div>
     </div>

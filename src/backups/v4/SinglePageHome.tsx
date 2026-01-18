@@ -171,7 +171,7 @@ export default function SinglePageHome() {
                       Master's in Data Science & Statistics
                     </p>
                     <p className="text-gray-500 dark:text-gray-500 text-sm font-sans">
-                      2023 — Present
+                      2023 - Present
                     </p>
                   </div>
 
@@ -180,10 +180,10 @@ export default function SinglePageHome() {
                       Arts & Métiers
                     </h4>
                     <p className="text-gray-900 dark:text-gray-100 mb-2">
-                      Engineering Degree — Industrial Engineering
+                      Engineering Degree - Industrial Engineering
                     </p>
                     <p className="text-gray-500 dark:text-gray-500 text-sm font-sans">
-                      2022 — Present
+                      2022 - Present
                     </p>
                   </div>
                 </div>
@@ -204,15 +204,15 @@ export default function SinglePageHome() {
                   </p>
                   <ul className="space-y-2 text-gray-900 dark:text-gray-100 leading-relaxed">
                     <li className="flex">
-                      <span className="mr-3">—</span>
+                      <span className="mr-3">-</span>
                       <span>Led sales operations and client relationship management</span>
                     </li>
                     <li className="flex">
-                      <span className="mr-3">—</span>
+                      <span className="mr-3">-</span>
                       <span>Managed project proposals and business development</span>
                     </li>
                     <li className="flex">
-                      <span className="mr-3">—</span>
+                      <span className="mr-3">-</span>
                       <span>Coordinated cross-functional teams for project delivery</span>
                     </li>
                   </ul>
@@ -257,7 +257,7 @@ export default function SinglePageHome() {
                   <ul className="space-y-3 mb-6">
                     {project.highlights.map((highlight, i) => (
                       <li key={i} className="text-gray-900 dark:text-gray-100 leading-relaxed flex">
-                        <span className="mr-3 text-gray-500 dark:text-gray-500">—</span>
+                        <span className="mr-3 text-gray-500 dark:text-gray-500">-</span>
                         <span>{highlight}</span>
                       </li>
                     ))}

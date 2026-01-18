@@ -32,7 +32,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <ul className="space-y-3 mb-6">
         {project.highlights.map((highlight, i) => (
           <li key={i} className="text-gray-600 dark:text-gray-400 leading-relaxed flex">
-            <span className="mr-3 text-gray-400">—</span>
+            <span className="mr-3 text-gray-400">-</span>
             <span>{highlight}</span>
           </li>
         ))}

@@ -2,14 +2,14 @@ import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    // Check system preference or localStorage
-    const isDarkMode = 
-      localStorage.theme === 'dark' || 
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    
+    // Force dark mode by default unless user has explicitly chosen light
+    let isDarkMode = true;
+    if (localStorage.theme === 'light') {
+      isDarkMode = false;
+    }
     setIsDark(isDarkMode);
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
@@ -34,13 +34,13 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+      className="p-2 rounded-full hover:bg-light-border dark:hover:bg-dark-border transition-colors"
       aria-label="Toggle dark mode"
     >
       {isDark ? (
-        <Sun className="text-gray-700 dark:text-gray-300" size={18} />
+        <Sun className="text-light-text dark:text-dark-text" size={18} />
       ) : (
-        <Moon className="text-gray-700 dark:text-gray-300" size={18} />
+        <Moon className="text-light-text dark:text-dark-text" size={18} />
       )}
     </button>
   );
