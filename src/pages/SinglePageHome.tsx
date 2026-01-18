@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { projects, skills, currentlyLearning } from '../data/projects';
+import { projects, currentlyLearning } from '../data/projects';
 
 export default function SinglePageHome() {
   const featuredProjects = projects.filter(p => p.category === 'featured');
