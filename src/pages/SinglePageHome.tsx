@@ -4,13 +4,6 @@ import { projects, skills, currentlyLearning } from '../data/projects';
 export default function SinglePageHome() {
   const featuredProjects = projects.filter(p => p.category === 'featured');
   const academicProjects = projects.filter(p => p.category === 'academic');
-  
-  const skillCategories = [
-    { title: "AI & LLMs", items: skills.ai },
-    { title: "ML & Data", items: skills.ml },
-    { title: "Engineering", items: skills.engineering },
-    { title: "Frontend", items: skills.frontend },
-  ];
 
   return (
     <div>
