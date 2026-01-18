@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "Multi-language support (Python, JS/TS, Java, C/C++, Fortran, Go, Rust) with streaming responses and real-time reasoning display"
     ],
     github: "https://github.com/mathis-dumont/documentation_generator",
-    video: "https://www.youtube.com/embed/O5LUEzxQzFA"
+    video: "https://www.youtube.com/watch?v=O5LUEzxQzFA"
   },
   {
     id: 2,
