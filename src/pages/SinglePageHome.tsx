@@ -55,10 +55,10 @@ const getEmbedUrl = (url: string) => {
                     LinkedIn
                   </a>
                   <a
-                    href="mailto:mathis.dumont@example.com"
+                    href="mailto:contact[point]mathisdumont@gmail.com"
                     className="text-light-text dark:text-dark-text hover:text-light-muted dark:hover:text-dark-muted transition-colors text-sm font-sans"
                   >
-                    Email
+                    contact[point]mathisdumont@gmail.com
                   </a>
                 </div>
               </div>
