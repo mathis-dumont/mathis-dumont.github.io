@@ -5,6 +5,18 @@ export default function SinglePageHome() {
   const featuredProjects = projects.filter(p => p.category === 'featured');
   const academicProjects = projects.filter(p => p.category === 'academic');
 
+// Helper to extract the ID and create an embed link
+const getEmbedUrl = (url: string) => {
+  if (!url) return '';
+  // Regex to find the video ID from standard YouTube URLs
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  
+  return (match && match[2].length === 11)
+    ? `https://www.youtube.com/embed/${match[2]}`
+    : url;
+};
+
   return (
     <div>
       {/* Hero Section */}
@@ -186,7 +198,7 @@ export default function SinglePageHome() {
                       <iframe
                         width="100%"
                         height="100%"
-                        src={project.video}
+                        src={getEmbedUrl(project.video)}
                         title={project.title}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
