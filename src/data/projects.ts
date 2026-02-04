@@ -18,13 +18,13 @@ export const projects: Project[] = [
     id: 1,
     title: "Multi-Agent Documentation System",
     category: "featured",
-    description: "Advanced multi-agent AI system leveraging Mistral's reasoning capabilities to automatically generate comprehensive documentation for any codebase. Agents coordinate through ReAct framework with tool-use for code analysis, generating interactive diagrams, dependency maps, and knowledge graphs.",
-    tags: ["Multi-Agent", "Mistral AI", "ReAct", "Tool-Use", "Flask", "NetworkX"],
+    description: "An automated system that turns any codebase into clear documentation. It uses specialized Mistral-powered agents to analyze logic, map dependencies, and generate interactive diagrams. By using the ReAct framework, the agents don't just read code—they reason about how it works to create a full architectural overview.",
+    tags: ["Multi-Agent", "Mistral AI", "ReAct", "Tool-Use", "Flask"],
     highlights: [
-      "Multi-agent orchestration: Analyzer, Architect, and Synthesizer agents coordinate via ReAct for code understanding",
-      "Intelligent tool-use: agents leverage code parsing, graph analysis, and LLM reasoning tools for accurate insights",
-      "5-stage agentic pipeline: structured extraction → dependency reasoning → architectural analysis → synthesis",
-      "Multi-language support (Python, JS/TS, Java, C/C++, Fortran, Go, Rust) with streaming responses and real-time reasoning display"
+      "Modular multi-agent setup: Specialized 'Analyzer', 'Architect', and 'Synthesizer' agents work together to break down complex codebases.",
+      "Smart tool integration: Agents use custom tools for code parsing and graph analysis, combining raw data with LLM reasoning.",
+      "Structured 5-step workflow: A solid process that moves from raw file extraction to full architectural mapping and final synthesis.",
+      "Broad language support: Handles everything from Python and TS to C++ and Rust, with a real-time terminal-style display of the agents' thought process."
     ],
     github: "https://github.com/mathis-dumont/documentation_generator",
     video: "https://www.youtube.com/watch?v=O5LUEzxQzFA"
@@ -33,13 +33,13 @@ export const projects: Project[] = [
     id: 2,
     title: "Steam Reviews NLP: Fine-tuning vs Prompting",
     category: "featured",
-    description: "Comprehensive research on LLM generation quality comparing zero-shot prompting, detailed prompt engineering, and parameter-efficient fine-tuning on TinyLlama 1.1B. Key finding: explicit constraints paradoxically degrade quality; fine-tuning achieves 34% improvement in factual accuracy with 87.67% validation agreement.",
+    description: "An in-depth comparison of how small LLMs (TinyLlama 1.1B) handle text generation. I tested zero-shot, prompt engineering, and LoRA fine-tuning to see which produced the most realistic game reviews. The project highlights a major trade-off: forcing strict constraints through prompts actually increases hallucinations on very small models, whereas fine-tuning improves accuracy by 34%.",
     tags: ["TinyLlama", "LoRA", "Fine-tuning", "LLM-as-a-Judge", "Mistral", "SBERT"],
     highlights: [
-      "Rigorous dual-validation: SBERT classifier (87.67% agreement with expert Mistral judge) on 300+ reviews",
-      "Counterintuitive finding: fine-tuning achieves 31% hallucination rate vs 65% with detailed prompts-prompt constraints force factually incorrect details on tiny LLMs",
-      "Scalable evaluation framework: hallucination detection, diversity metrics (n-gram, embeddings), realism scoring across 20K+ generated reviews",
-      "End-to-end ML pipeline from Steam API collection to GPU training (Google Colab) to multi-method evaluation"
+      "Validation Benchmarking: Developed a dual-validation system using SBERT and Mistral (acting as a judge), achieving 87.67% agreement on 300+ sample reviews.",
+      "The 'Constraint Paradox': Found that complex prompts double the hallucination rate (65%) compared to fine-tuning (31%) because small models struggle to follow rigid instructions.",
+      "Large-scale Evaluation: Built a framework to measure diversity (n-grams/embeddings) and realism across a dataset of 20,000+ AI-generated reviews.",
+      "Full ML Workflow: Managed the entire pipeline from scraping data via the Steam API to GPU-accelerated training and comparative performance analysis."
     ],
     github: "https://github.com/mlang789/steam-project"
   },
@@ -47,13 +47,13 @@ export const projects: Project[] = [
     id: 3,
     title: "Horse Racing Prediction Platform",
     category: "featured",
-    description: "Production-grade ML platform for horse racing predictions with microservices architecture. Features automated daily ETL via GitHub Actions CRON, XGBoost modeling, Value Betting module, and dual interfaces (FastAPI + Streamlit).",
+    description: "A full-stack ML platform that automates the entire lifecycle of horse racing predictions—from daily scraping to bet recommendations. The system uses XGBoost to predict race outcomes and compares them against market odds to identify value bets, all served through a modular API and dashboard.",
     tags: ["XGBoost", "Streamlit", "FastAPI", "Supabase", "GitHub Actions", "Docker", "ETL"],
     highlights: [
-      "Automated daily data ingestion via GitHub Actions CRON to Supabase PostgreSQL",
-      "'Sniper' Value Betting module: AI vs market comparison for positive edge detection",
-      "Microservices architecture: multithreaded ETL, model serving, Streamlit dashboard",
-      "Makefile orchestration for seamless Docker deployment and pipeline execution"
+      "Automated Data Pipeline: Uses GitHub Actions to run daily ETL tasks, keeping the Supabase database synced with the latest race data without manual intervention.",
+      "'Sniper' Betting Module: An algorithmic layer that identifies a 'positive edge' by spotting discrepancies between my model's probabilities and bookmaker odds.",
+      "Decoupled Architecture: Built with a clear separation between the multithreaded ETL engine, the FastAPI model server, and the Streamlit frontend.",
+      "Streamlined DevOps: Containerized with Docker and managed via Makefiles to ensure the entire pipeline can be deployed or updated with a single command."
     ],
     github: "https://github.com/mathis-dumont/horse-racing-prediction"
   },
@@ -61,13 +61,13 @@ export const projects: Project[] = [
     id: 4,
     title: "Multimodal RAG System",
     category: "featured",
-    description: "Production-ready multimodal RAG system processing text and images from technical documentation, featuring AI-powered vision understanding, semantic chunking with spaCy, and incremental FAISS indexing. Demonstrates sophisticated retrieval techniques with source attribution.",
+    description: "A RAG system designed to handle complex technical documents containing both text and images. By using Mistral Vision to 'describe' visual elements, the system makes charts and diagrams as searchable as text. It features a custom pipeline for semantic chunking and incremental indexing to keep the knowledge base up to date.",
     tags: ["Multimodal RAG", "Mistral Vision", "FAISS", "spaCy", "Streamlit", "PyMuPDF"],
     highlights: [
-      "True multimodal processing: Mistral Vision API generates image descriptions integrated into semantic search for visual content retrieval",
-      "Semantic chunking with spaCy NLP and contextual window retrieval for coherent LLM responses",
-      "Incremental knowledge base management with automatic document conversion (Word→PDF) and deduplication",
-      "Production-grade optimizations: FAISS IndexFlatIP, source traceability with document citations"
+      "Image-to-Text Integration: Uses Mistral Vision to caption visual data, allowing users to retrieve images through semantic text queries.",
+      "Context-Aware Chunking: Replaced basic character splitting with spaCy-based semantic chunking to ensure retrieved segments maintain their original meaning.",
+      "Efficient Indexing: Built an incremental FAISS pipeline with automated document conversion (Word to PDF) and deduplication for easy database updates.",
+      "Source Traceability: Implemented a citation system that links every response to its specific source document and page, minimizing hallucination risks."
     ],
     github: "https://github.com/mathis-dumont/advanced-rag"
   },
@@ -77,13 +77,13 @@ export const projects: Project[] = [
     id: 5,
     title: "Fraud Detection in Imbalanced Datasets",
     category: "academic",
-    description: "Research investigation of fraud detection methodologies for highly imbalanced credit card transactions. Rigorous comparative analysis of classical supervised classifiers (Logistic Regression, XGBoost), unsupervised autoencoders for anomaly detection, and cost-sensitive thresholding strategies aligned with economic utility.",
+    description: "A research project focused on detecting credit card fraud in datasets where only 0.17% of transactions are fraudulent. We compared standard supervised models like XGBoost against unsupervised Autoencoders to see which approach handles extreme imbalance better, while factoring in the actual financial cost of missing a fraudulent transaction.",
     tags: ["Autoencoders", "XGBoost", "Logistic Regression", "Cost-Sensitive Learning", "Anomaly Detection"],
     highlights: [
-      "Multi-methodology comparison: evaluated Logistic Regression, XGBoost, and autoencoder-based anomaly detection on 0.17% fraud rate dataset",
-      "Theoretical framework: explored undersampling bias implications and cost-sensitive decision thresholding for business-aligned performance",
-      "Autoencoder anomaly detection: reconstruction-based scoring for imbalanced learning without synthetic oversampling",
-      "Technical research paper with comprehensive statistical analysis and economic utility optimization"
+      "Model Benchmarking: Evaluated Logistic Regression, XGBoost, and Autoencoders on a highly skewed dataset to identify the most robust detection method.",
+      "Business-Centric Metrics: Moved beyond simple accuracy by implementing cost-sensitive thresholding to align model decisions with real-world financial impact.",
+      "Anomaly Detection Approach: Used reconstruction-based scoring with Autoencoders to detect fraud without needing synthetic oversampling (like SMOTE).",
+      "Statistical Analysis: Authored a detailed technical report analyzing the trade-offs between different strategies and their economic utility."
     ],
     pdf: "/documents/fraud-detection-report.pdf"
   },
@@ -91,15 +91,15 @@ export const projects: Project[] = [
     id: 6,
     title: "IoT Smart Beehive System",
     category: "academic",
-    description: "Award-winning automated remote monitoring system for beehive management. Measures critical parameters (temperature, humidity, hive mass) to optimize bee colony conditions and detect swarming events. Provides beekeepers with real-time remote data access and automated alerts via LoRaWAN.",
+    description: "An IoT system developed to monitor beehive health remotely. By tracking temperature, humidity, and weight, the system provides beekeepers with real-time data to optimize colony conditions and detect swarming events early. Designed for rural environments, it uses LoRaWAN for long-range, low-power communication.",
     tags: ["IoT", "Embedded Systems", "ESP8266", "LoRaWAN", "Sensors", "Remote Monitoring"],
     highlights: [
-      "Multi-sensor integration: temperature, humidity, and weight sensors for comprehensive hive health monitoring",
-      "Swarming detection through mass measurement analysis to alert beekeepers of colony activity",
-      "LoRaWAN connectivity for long-range, low-power remote data transmission",
-      "2nd Prize winner at 12th Trinational Congress of Natural Sciences and Technology"
+      "Hardware Integration: Built a multi-sensor node (ESP8266) to collect environmental data and hive weight for a complete view of colony status.",
+      "Swarming Detection: Implemented logic to analyze sudden mass changes, providing an automated early warning system for beekeepers.",
+      "Low-Power Connectivity: Leveraged LoRaWAN to ensure reliable data transmission from remote places where cellular or WiFi coverage is unavailable.",
+      "Award Recognition: Won 2nd Prize at the 12th Trinational Congress of Natural Sciences and Technology for technical innovation."
     ],
-    award: "2nd Prize - 12th Trinational Congress of Natural Sciences and Technology"
+    award: "2nd Prize - 12th Trinational Congress of Natural Sciences and Technology, Freiburg"
   }
 ];
 

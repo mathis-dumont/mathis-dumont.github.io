@@ -83,13 +83,13 @@ const getEmbedUrl = (url: string) => {
             
             <div className="space-y-6 text-light-text dark:text-dark-text leading-loose text-base sm:text-lg">
               <p>
-                Welcome! I'm Mathis, an engineer passionate about building AI systems that work in the real world. After my engineering degree in Arts et Métiers, I'm pursuing a Master of Data Science at ENSAE. My academic work brings together the rigor of mathematical foundations with practical implementation challenges.
+                Welcome! I'm Mathis, an engineer passionate about building AI systems that create value.
               </p>
               <p>
-                My focus is on building AI systems that can be deployed in real-world settings. I work with agentic frameworks and retrieval-augmented generation architectures, and I'm particularly interested in how theoretical advances can be translated into production-ready solutions. Through internships at ArcelorMittal and other companies, I've worked on applying machine learning to industrial problems, from defect prediction in steel manufacturing to developing enterprise resource planning systems.
+                My focus is on developing AI solutions that can be deployed in real-world settings. Through internships at ArcelorMittal and other companies, I've worked on applying data science to industrial problems, from defect prediction in steel manufacturing to the development of enterprise resource planning systems.
               </p>
               <p>
-                Beyond technical work, I served as Head of Sales at Arts & Métiers Junior Enterprise, where I led client relationships and managed cross-functional teams. This role helped me develop skills in leadership and project management while delivering engineering solutions to industry partners like Westinghouse and startups like Iridesense.
+                Beyond technical work, I spent two years volunteering as Head of Sales at Arts & Métiers Junior Enterprise, where I led client relationships and managed cross-functional teams. This role helped me develop leadership and project management skills while delivering engineering solutions to industry partners like Westinghouse and startups like Iridesense.
               </p>
             </div>
           </motion.div>
