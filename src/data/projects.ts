@@ -18,13 +18,13 @@ export const projects: Project[] = [
     id: 1,
     title: "Multi-Agent Documentation System",
     category: "featured",
-    description: "An automated system that turns any codebase into clear documentation. It uses specialized Mistral-powered agents to analyze logic, map dependencies, and generate interactive diagrams. By using the ReAct framework, the agents don't just read code—they reason about how it works to create a full architectural overview.",
+    description: "This tool converts source code into technical documentation. It uses Mistral agents to map logic and dependencies. Using the ReAct framework, the agents reason about the architecture rather than just reading files. It generates interactive diagrams and a full codebase overview.",
     tags: ["Multi-Agent", "Mistral AI", "ReAct", "Tool-Use", "Flask"],
     highlights: [
-      "Modular multi-agent setup: Specialized 'Analyzer', 'Architect', and 'Synthesizer' agents work together to break down complex codebases.",
-      "Smart tool integration: Agents use custom tools for code parsing and graph analysis, combining raw data with LLM reasoning.",
-      "Structured 5-step workflow: A solid process that moves from raw file extraction to full architectural mapping and final synthesis.",
-      "Broad language support: Handles everything from Python and TS to C++ and Rust, with a real-time terminal-style display of the agents' thought process."
+      "Modular setup with specialized Analyzer, Architect, and Synthesizer agents.",
+      "Custom tools for code parsing and graph analysis integrated with LLM reasoning.",
+      "A 5-step workflow covering file extraction, mapping, and final synthesis.",
+      "Support for Python, C, C++, COBOL, Fortran and Rust with a real-time display of agent thoughts."
     ],
     github: "https://github.com/mathis-dumont/documentation_generator",
     video: "https://www.youtube.com/watch?v=O5LUEzxQzFA"
@@ -33,13 +33,13 @@ export const projects: Project[] = [
     id: 2,
     title: "Steam Reviews NLP: Fine-tuning vs Prompting",
     category: "featured",
-    description: "An in-depth comparison of how small LLMs (TinyLlama 1.1B) handle text generation. I tested zero-shot, prompt engineering, and LoRA fine-tuning to see which produced the most realistic game reviews. The project highlights a major trade-off: forcing strict constraints through prompts actually increases hallucinations on very small models, whereas fine-tuning improves accuracy by 34%.",
+    description: "I compared how small LLMs like TinyLlama 1.1B handle text generation. I tested zero-shot, prompt engineering, and LoRA fine-tuning. The results showed that complex prompts increase hallucinations in small models. Fine-tuning improved accuracy by 34% over prompting.",
     tags: ["TinyLlama", "LoRA", "Fine-tuning", "LLM-as-a-Judge", "Mistral", "SBERT"],
     highlights: [
-      "Validation Benchmarking: Developed a dual-validation system using SBERT and Mistral (acting as a judge), achieving 87.67% agreement on 300+ sample reviews.",
-      "The 'Constraint Paradox': Found that complex prompts double the hallucination rate (65%) compared to fine-tuning (31%) because small models struggle to follow rigid instructions.",
-      "Large-scale Evaluation: Built a framework to measure diversity (n-grams/embeddings) and realism across a dataset of 20,000+ AI-generated reviews.",
-      "Full ML Workflow: Managed the entire pipeline from scraping data via the Steam API to GPU-accelerated training and comparative performance analysis."
+      "Built a validation system using SBERT and Mistral to judge review quality.",
+      "Found that rigid prompts doubled the hallucination rate compared to fine-tuning.",
+      "Measured diversity and realism across a dataset of 20,000 AI-generated reviews.",
+      "Managed the pipeline from Steam API scraping to GPU-accelerated training."
     ],
     github: "https://github.com/mlang789/steam-project"
   },
@@ -47,13 +47,13 @@ export const projects: Project[] = [
     id: 3,
     title: "Horse Racing Prediction Platform",
     category: "featured",
-    description: "A full-stack ML platform that automates the entire lifecycle of horse racing predictions—from daily scraping to bet recommendations. The system uses XGBoost to predict race outcomes and compares them against market odds to identify value bets, all served through a modular API and dashboard.",
+    description: "This platform automates the lifecycle of horse racing predictions. It handles daily data scraping and generates bet recommendations. The system uses XGBoost to find value bets by comparing model probabilities against market odds.",
     tags: ["XGBoost", "Streamlit", "FastAPI", "Supabase", "GitHub Actions", "Docker", "ETL"],
     highlights: [
-      "Automated Data Pipeline: Uses GitHub Actions to run daily ETL tasks, keeping the Supabase database synced with the latest race data without manual intervention.",
-      "'Sniper' Betting Module: An algorithmic layer that identifies a 'positive edge' by spotting discrepancies between my model's probabilities and bookmaker odds.",
-      "Decoupled Architecture: Built with a clear separation between the multithreaded ETL engine, the FastAPI model server, and the Streamlit frontend.",
-      "Streamlined DevOps: Containerized with Docker and managed via Makefiles to ensure the entire pipeline can be deployed or updated with a single command."
+      "Automated ETL tasks via GitHub Actions to keep the Supabase database updated.",
+      "Algorithmic betting module that identifies discrepancies in bookmaker odds.",
+      "Decoupled architecture using FastAPI for the model and Streamlit for the UI.",
+      "Containerized deployment using Docker and Makefiles."
     ],
     github: "https://github.com/mathis-dumont/horse-racing-prediction"
   },
@@ -61,13 +61,13 @@ export const projects: Project[] = [
     id: 4,
     title: "Multimodal RAG System",
     category: "featured",
-    description: "A RAG system designed to handle complex technical documents containing both text and images. By using Mistral Vision to 'describe' visual elements, the system makes charts and diagrams as searchable as text. It features a custom pipeline for semantic chunking and incremental indexing to keep the knowledge base up to date.",
+    description: "This RAG system processes technical documents with both text and images. It uses Mistral Vision to describe charts, making them searchable via text queries. It features semantic chunking and incremental indexing to keep the knowledge base current.",
     tags: ["Multimodal RAG", "Mistral Vision", "FAISS", "spaCy", "Streamlit", "PyMuPDF"],
     highlights: [
-      "Image-to-Text Integration: Uses Mistral Vision to caption visual data, allowing users to retrieve images through semantic text queries.",
-      "Context-Aware Chunking: Replaced basic character splitting with spaCy-based semantic chunking to ensure retrieved segments maintain their original meaning.",
-      "Efficient Indexing: Built an incremental FAISS pipeline with automated document conversion (Word to PDF) and deduplication for easy database updates.",
-      "Source Traceability: Implemented a citation system that links every response to its specific source document and page, minimizing hallucination risks."
+      "Integrated Mistral Vision to caption visual data for semantic retrieval.",
+      "Used spaCy-based semantic chunking to preserve context in retrieved segments.",
+      "Built an incremental FAISS pipeline with automated Word-to-PDF conversion.",
+      "Implemented a citation system that links every answer to a specific page."
     ],
     github: "https://github.com/mathis-dumont/advanced-rag"
   },
@@ -77,13 +77,13 @@ export const projects: Project[] = [
     id: 5,
     title: "Fraud Detection in Imbalanced Datasets",
     category: "academic",
-    description: "A research project focused on detecting credit card fraud in datasets where only 0.17% of transactions are fraudulent. We compared standard supervised models like XGBoost against unsupervised Autoencoders to see which approach handles extreme imbalance better, while factoring in the actual financial cost of missing a fraudulent transaction.",
+    description: "This project analyzed credit card fraud detection on a dataset with 0.17% fraud. I compared XGBoost against unsupervised Autoencoders. The study focused on the financial cost of missing fraudulent transactions rather than just accuracy.",
     tags: ["Autoencoders", "XGBoost", "Logistic Regression", "Cost-Sensitive Learning", "Anomaly Detection"],
     highlights: [
-      "Model Benchmarking: Evaluated Logistic Regression, XGBoost, and Autoencoders on a highly skewed dataset to identify the most robust detection method.",
-      "Business-Centric Metrics: Moved beyond simple accuracy by implementing cost-sensitive thresholding to align model decisions with real-world financial impact.",
-      "Anomaly Detection Approach: Used reconstruction-based scoring with Autoencoders to detect fraud without needing synthetic oversampling (like SMOTE).",
-      "Statistical Analysis: Authored a detailed technical report analyzing the trade-offs between different strategies and their economic utility."
+      "Benchmarked Logistic Regression, XGBoost, and Autoencoders on skewed data.",
+      "Implemented cost-sensitive thresholding to prioritize financial impact.",
+      "Used reconstruction-based scoring with Autoencoders to avoid synthetic oversampling.",
+      "Authored a technical report on model trade-offs and economic utility."
     ],
     pdf: "/documents/fraud-detection-report.pdf"
   },
@@ -91,13 +91,13 @@ export const projects: Project[] = [
     id: 6,
     title: "IoT Smart Beehive System",
     category: "academic",
-    description: "An IoT system developed to monitor beehive health remotely. By tracking temperature, humidity, and weight, the system provides beekeepers with real-time data to optimize colony conditions and detect swarming events early. Designed for rural environments, it uses LoRaWAN for long-range, low-power communication.",
+    description: "I built an IoT system to monitor beehive health in real-time. It tracks temperature, humidity, and weight to detect swarming events. The system uses LoRaWAN for long-range communication in rural environments without WiFi.",
     tags: ["IoT", "Embedded Systems", "ESP8266", "LoRaWAN", "Sensors", "Remote Monitoring"],
     highlights: [
-      "Hardware Integration: Built a multi-sensor node (ESP8266) to collect environmental data and hive weight for a complete view of colony status.",
-      "Swarming Detection: Implemented logic to analyze sudden mass changes, providing an automated early warning system for beekeepers.",
-      "Low-Power Connectivity: Leveraged LoRaWAN to ensure reliable data transmission from remote places where cellular or WiFi coverage is unavailable.",
-      "Award Recognition: Won 2nd Prize at the 12th Trinational Congress of Natural Sciences and Technology for technical innovation."
+      "Integrated hardware sensors with an ESP8266 to collect environmental data.",
+      "Built logic to identify swarming based on sudden mass changes in the hive.",
+      "Used LoRaWAN for reliable data transmission in remote areas.",
+      "Won 2nd Prize at the 12th Trinational Congress of Natural Sciences and Technology."
     ],
     award: "2nd Prize - 12th Trinational Congress of Natural Sciences and Technology, Freiburg"
   }

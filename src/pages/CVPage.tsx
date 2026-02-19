@@ -119,7 +119,7 @@ export default function CVPage() {
                 Data Scientist Intern
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">
-                ArcelorMittal, Simulation and Modeling Department
+                ArcelorMittal, R&D Simulation Dept.
               </p>
               <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
                 Jan. 2025 - Jul. 2025
@@ -127,11 +127,23 @@ export default function CVPage() {
               <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <li className="flex">
                   <span className="mr-3">-</span>
+                  <span>Designed a 5-stage agentic pipeline (Mistral ReAct) to reverse-engineer over 200k lines of legacy Fortran code.</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-3">-</span>
+                  <span>Built Python tools for static analysis and dependency mapping to automate documentation generation.</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-3">-</span>
+                  <span>Reduced developer onboarding time from weeks to days and presented the architecture to the Chief Data Officer.</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-3">-</span>
                   <span>Developed and evaluated regression and classification models to predict and categorize defects on steel sheets after hot rolling</span>
                 </li>
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Technologies: Python, Numpy, Pandas, Scikit-learn, PyTorch, Seaborn, Git, Docker</span>
+                  <span><strong>Stack:</strong> Python, Mistral API, ReAct agents, Docker, Fortran AST parsing, AWS S3.</span>
                 </li>
               </ul>
             </div>
@@ -141,7 +153,7 @@ export default function CVPage() {
                 Software Engineer Intern
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">
-                Utilys, Mulhouse
+                Utilys
               </p>
               <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
                 Jun. 2024 - Sept. 2024
@@ -149,7 +161,15 @@ export default function CVPage() {
               <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Redesigned and developed the production and sales tracking system (ERP) through a web application</span>
+                  <span>Built a full-stack ERP web application to centralize production and sales data across teams.</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-3">-</span>
+                  <span>Replaced legacy tools with real-time dashboards to improve reporting latency and decision-making.</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-3">-</span>
+                  <span><strong>Stack:</strong> Python, SQL, FastAPI.</span>
                 </li>
               </ul>
             </div>
