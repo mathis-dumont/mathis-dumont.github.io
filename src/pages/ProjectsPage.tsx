@@ -85,6 +85,14 @@ export default function ProjectsPage() {
                 <p className="text-gray-600 dark:text-gray-400 leading-loose mb-6">
                   {project.description}
                 </p>
+                <ul className="space-y-3 mb-6">
+                  {project.highlights.map((highlight, i) => (
+                    <li key={i} className="text-gray-600 dark:text-gray-400 leading-relaxed flex">
+                      <span className="mr-3 text-gray-400">-</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-3">
                   {project.tags.map((tag) => (
                     <span

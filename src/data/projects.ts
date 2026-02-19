@@ -89,6 +89,19 @@ export const projects: Project[] = [
   },
   {
     id: 6,
+    title: "Structural Optimization and FEA — Engine Connecting Rod",
+    category: "academic",
+    description: "Modeled and simulated an engine connecting rod under realistic loading and boundary conditions using Finite Element Analysis. The study focused on structural integrity, stress distribution, and convergence behavior through mesh refinement.",
+    tags: ["FEA", "Structural Analysis", "Mesh Refinement", "Mechanical Engineering", "Simulation"],
+    highlights: [
+      "Modeled an engine connecting rod under realistic loading and boundary conditions.",
+      "Performed mesh refinement and convergence analysis to ensure simulation accuracy.",
+      "Analyzed stress distribution to identify critical failure zones.",
+      "Applied FEA methodology to validate structural integrity under operating loads."
+    ]
+  },
+  {
+    id: 7,
     title: "IoT Smart Beehive System",
     category: "academic",
     description: "I built an IoT system to monitor beehive health in real-time. It tracks temperature, humidity, and weight to detect swarming events. The system uses LoRaWAN for long-range communication in rural environments without WiFi.",

@@ -83,13 +83,13 @@ const getEmbedUrl = (url: string) => {
             
             <div className="space-y-6 text-light-text dark:text-dark-text leading-loose text-base sm:text-lg">
               <p>
-                Welcome! I'm Mathis, an engineer passionate about building AI systems that create value.
+                Welcome! I'm Mathis, I build AI systems designed for production.
               </p>
               <p>
-                My focus is on developing AI solutions that can be deployed in real-world settings. Through internships at ArcelorMittal and other companies, I've worked on applying data science to industrial problems, from defect prediction in steel manufacturing to the development of enterprise resource planning systems.
+                My focus is on applied GenAI and software engineering. At ArcelorMittal, I developed an agentic LLM pipeline to reverse-engineer legacy Fortran code and worked on defect prediction models. Before that, I shipped full-stack ERP tools that cut operational reporting times from days to seconds.
               </p>
               <p>
-                Beyond technical work, I spent two years volunteering as Head of Sales at Arts & Métiers Junior Enterprise, where I led client relationships and managed cross-functional teams. This role helped me develop leadership and project management skills while delivering engineering solutions to industry partners like Westinghouse and startups like Iridesense.
+                I also understand the business side. As Head of Sales at a Junior Enterprise, I managed client projects for partners like Westinghouse and Iridesense. I know how to align complex technical work with actual business requirements.
               </p>
             </div>
           </motion.div>
@@ -238,6 +238,15 @@ const getEmbedUrl = (url: string) => {
                       {project.description}
                     </p>
 
+                    <ul className="space-y-3 mb-6">
+                      {project.highlights.map((highlight, i) => (
+                        <li key={i} className="text-light-text dark:text-dark-text leading-relaxed flex">
+                          <span className="mr-3 text-light-muted dark:text-dark-muted">-</span>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+
                     {(project.github || project.pdf) && (
                       <div className="flex gap-6 text-sm font-sans mb-6">
                         {project.github && (
@@ -273,6 +282,14 @@ const getEmbedUrl = (url: string) => {
                         </span>
                       ))}
                     </div>
+
+                    {project.id === 6 && (
+                      <img
+                        src="/images/rod.png"
+                        alt="Engine Connecting Rod FEA"
+                        className="w-64 mt-6 mx-auto block border border-light-border dark:border-dark-border"
+                      />
+                    )}
                   </motion.article>
                 ))}
               </div>
@@ -306,7 +323,7 @@ const getEmbedUrl = (url: string) => {
                   <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        Master's Degree in Data Science
+                        MSc Data Science
                       </h4>
                       <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         2025 - 2026
@@ -326,7 +343,7 @@ const getEmbedUrl = (url: string) => {
                   <div className="border-l border-light-border dark:border-dark-border pl-8">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        Master of Engineering
+                        MSc Mechanical Engineering
                       </h4>
                       <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
                         2022 - 2025
@@ -411,11 +428,23 @@ const getEmbedUrl = (url: string) => {
                     <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
-                        <span>Developed and evaluated regression and classification models to predict and categorize defects on steel sheets after hot rolling</span>
+                        <span>Developed and evaluated regression and classification models to predict and categorize defects on steel sheets after hot rolling.</span>
                       </li>
                       <li className="flex">
                         <span className="mr-3">-</span>
-                        <span>Technologies: Python, Numpy, Pandas, Scikit-learn, PyTorch, Seaborn, Git, Docker</span>
+                        <span>Designed and deployed a multi-agent ML pipeline using Mistral API to analyze and structure Fortran legacy simulation codebases (200k+ lines of code) used in industrial modeling.</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-3">-</span>
+                        <span>Engineered static analysis and dependency graph synthesis tools in Python.</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-3">-</span>
+                        <span>Automated documentation generation, reducing onboarding time from weeks to days.</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-3">-</span>
+                        <span>Technologies: Python, Mistral API, ReAct agents, Scikit-learn, Docker, Fortran AST parsing, S3 AWS.</span>
                       </li>
                     </ul>
                   </div>
@@ -435,7 +464,15 @@ const getEmbedUrl = (url: string) => {
                     <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
-                        <span>Redesigned and developed the production and sales tracking system (ERP) through a web application</span>
+                        <span>Architected and shipped a full-stack ERP web application replacing legacy tools and centralizing production and sales data for cross-team visibility.</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-3">-</span>
+                        <span>Improved reporting latency from days to real-time dashboards, enabling faster operational decision-making.</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-3">-</span>
+                        <span>Technologies: Python, SQL, FastAPI, Flask.</span>
                       </li>
                     </ul>
                   </div>
@@ -455,7 +492,7 @@ const getEmbedUrl = (url: string) => {
                     <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
                       <li className="flex">
                         <span className="mr-3">-</span>
-                        <span>Process optimization and maintenance scheduling for industrial equipment</span>
+                        <span>Process optimization and maintenance scheduling for industrial equipment.</span>
                       </li>
                     </ul>
                   </div>
