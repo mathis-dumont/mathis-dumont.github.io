@@ -82,7 +82,7 @@ export const projects: Project[] = [
     highlights: [
       "Benchmarked Logistic Regression, XGBoost, and Autoencoders on skewed data.",
       "Implemented cost-sensitive thresholding to prioritize financial impact.",
-      "Used reconstruction-based scoring with Autoencoders to avoid synthetic oversampling.",
+      "Used reconstruction-based scoring with Autoencoders to detect zero-day anomalies.",
       "Authored a technical report on model trade-offs and economic utility."
     ],
     pdf: "/documents/fraud-detection-report.pdf"
