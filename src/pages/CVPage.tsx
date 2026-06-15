@@ -35,7 +35,7 @@ export default function CVPage() {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-2">
-                Master's Degree in Data Science
+                MSc Data Science
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">
                 ENSAE Paris
@@ -44,30 +44,23 @@ export default function CVPage() {
                 2025 - 2026
               </p>
               <p className="text-gray-600 dark:text-gray-400">
-                Main courses: Deep Learning, Natural Language Processing, Reinforcement Learning, Optimal Transport
+                Deep Learning, NLP, Reinforcement Learning, Bayesian Statistics, Statistical Learning.
               </p>
             </div>
 
             <div>
               <h3 className="text-xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-2">
-                Master of Engineering
+                MSc Industrial Engineering
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">
-                Arts & Métiers ParisTech, Metz
+                Arts & Métiers ParisTech
               </p>
               <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
                 2022 - 2025
               </p>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
-                <li className="flex">
-                  <span className="mr-3">-</span>
-                  <span>Main courses: Probability, Statistics, Computer Science, Optimization, Mechanics, Energy Systems, Manufacturing</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-3">-</span>
-                  <span>Ranked 50th/1202</span>
-                </li>
-              </ul>
+              <p className="text-gray-600 dark:text-gray-400">
+                Probability, Statistics, Optimization, and Industrial Systems (top 5% of cohort).
+              </p>
             </div>
 
             <div>
@@ -75,13 +68,13 @@ export default function CVPage() {
                 Exchange Semester
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">
-                Politecnico di Milano, Milan, Italy
+                Politecnico di Milano
               </p>
               <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
                 2024 - 2025
               </p>
               <p className="text-gray-600 dark:text-gray-400">
-                Main courses: Machine Learning, Optimization, Lean Management
+                Machine Learning, Dynamic Pricing, Lean Management.
               </p>
             </div>
 
@@ -96,7 +89,7 @@ export default function CVPage() {
                 2020 - 2022
               </p>
               <p className="text-gray-600 dark:text-gray-400">
-                Two-year intensive program in Mathematics, Physics, and Engineering Sciences, preparing for national competitive entrance exams to top engineering schools
+                Intensive Mathematics and Physics.
               </p>
             </div>
           </div>
@@ -119,7 +112,33 @@ export default function CVPage() {
                 Data Scientist Intern
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">
-                ArcelorMittal, R&D Simulation Dept.
+                Mirakl, R&D Team, France
+              </p>
+              <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
+                Apr. 2026 - present
+              </p>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
+                <li className="flex">
+                  <span className="mr-3">-</span>
+                  <span>Building a human-in-the-loop feedback system to improve an open-weights LLM that automates seller-product catalog onboarding on a marketplace processing 100M+ events/week.</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-3">-</span>
+                  <span>Designed a human feedback collection and evaluation pipeline, applying Direct Preference Optimization (DPO) to align model outputs with catalog-quality requirements, targeting a 20% reduction in automation errors.</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-3">-</span>
+                  <span><strong>Stack:</strong> Python, PyTorch, Hugging Face, DPO, LLM alignment, large-scale data pipelines.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-2">
+                Data Scientist Intern
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">
+                ArcelorMittal, R&D Simulation Dept., France
               </p>
               <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
                 Jan. 2025 - Jul. 2025
@@ -127,23 +146,19 @@ export default function CVPage() {
               <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Designed a 5-stage agentic pipeline (Mistral ReAct) to reverse-engineer over 200k lines of legacy Fortran code.</span>
+                  <span>Designed and deployed a multi-agent LLM system (Mistral ReAct + tool orchestration) to reverse-engineer big (200k+ lines of code) legacy Fortran codebases.</span>
                 </li>
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Built Python tools for static analysis and dependency mapping to automate documentation generation.</span>
+                  <span>Engineered static analysis and dependency graph synthesis tools in Python.</span>
                 </li>
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Reduced developer onboarding time from weeks to days and presented the architecture to the Chief Data Officer.</span>
+                  <span>Automated documentation generation, reducing onboarding time from weeks to days and presented results directly to David Glijer (CDO).</span>
                 </li>
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Developed and evaluated regression and classification models to predict and categorize defects on steel sheets after hot rolling</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-3">-</span>
-                  <span><strong>Stack:</strong> Python, Mistral API, ReAct agents, Docker, Fortran AST parsing, AWS S3.</span>
+                  <span><strong>Stack:</strong> Python, Mistral API, ReAct agents, Scikit-learn, Docker, Fortran AST parsing, AWS S3.</span>
                 </li>
               </ul>
             </div>
@@ -153,7 +168,7 @@ export default function CVPage() {
                 Software Engineer Intern
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">
-                Utilys
+                Utilys, France
               </p>
               <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
                 Jun. 2024 - Sept. 2024
@@ -161,33 +176,15 @@ export default function CVPage() {
               <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Built a full-stack ERP web application to centralize production and sales data across teams.</span>
+                  <span>Architected and shipped a full-stack ERP web application replacing legacy tools and centralizing production and sales data for cross-team visibility.</span>
                 </li>
                 <li className="flex">
                   <span className="mr-3">-</span>
-                  <span>Replaced legacy tools with real-time dashboards to improve reporting latency and decision-making.</span>
+                  <span>Improved reporting latency from days to real-time dashboards, enabling faster operational decision-making.</span>
                 </li>
                 <li className="flex">
                   <span className="mr-3">-</span>
                   <span><strong>Stack:</strong> Python, SQL, FastAPI.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-serif font-medium text-gray-900 dark:text-gray-100 mb-2">
-                Analyst Intern
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-2">
-                EIFFAGE, Fessenheim
-              </p>
-              <p className="text-gray-500 dark:text-gray-500 text-sm font-sans mb-4">
-                Jun. 2023 - Jul. 2023
-              </p>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
-                <li className="flex">
-                  <span className="mr-3">-</span>
-                  <span>Process optimization and maintenance scheduling for industrial equipment</span>
                 </li>
               </ul>
             </div>
@@ -257,21 +254,38 @@ export default function CVPage() {
             <ul className="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
               <li className="flex">
                 <span className="mr-3">-</span>
-                <span>Developed maintenance solutions for steam generators for Westinghouse France</span>
-              </li>
-              <li className="flex">
-                <span className="mr-3">-</span>
-                <span>Designed a graphical interface for a LiDAR system for the startup Iridesense</span>
-              </li>
-              <li className="flex">
-                <span className="mr-3">-</span>
-                <span>Co-organized the event "Reindustrialize France": 4 conferences, 1 hackathon, 300 participants</span>
-              </li>
-              <li className="flex">
-                <span className="mr-3">-</span>
-                <span>Achievements: awarded Best Junior Enterprise in France (2024), €250,000 turnover, 60 projects completed</span>
+                <span>Managed client relations for France's #1 Junior Enterprise (<strong>€250k turnover</strong>); led missions for <strong>Westinghouse</strong> (Steam generators) and <strong>Iridesense</strong> (LiDAR UI) and organized "Reindustrialize France Seminar" (300 participants).</span>
               </li>
             </ul>
+          </div>
+        </motion.section>
+
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-24 pb-24 border-b border-gray-200 dark:border-gray-800"
+        >
+          <h2 className="text-3xl font-serif font-medium mb-12 text-gray-900 dark:text-gray-100">
+            Skills & Interests
+          </h2>
+
+          <div className="space-y-8 text-gray-600 dark:text-gray-400">
+            <div className="flex flex-col md:flex-row md:gap-4">
+              <span className="font-medium text-gray-900 dark:text-gray-100 md:w-32 shrink-0">Tech Stack</span>
+              <span>Python, SQL (PostgreSQL), Docker, FastAPI, Git, GitHub Actions, Linux, Supabase.</span>
+            </div>
+            
+            <div className="flex flex-col md:flex-row md:gap-4">
+              <span className="font-medium text-gray-900 dark:text-gray-100 md:w-32 shrink-0">Languages</span>
+              <span>French (Native), English (C1), Italian (A2), German (A2).</span>
+            </div>
+            
+            <div className="flex flex-col md:flex-row md:gap-4">
+              <span className="font-medium text-gray-900 dark:text-gray-100 md:w-32 shrink-0">Interests</span>
+              <span>Flute (14 years), Badminton, Entrepreneurship (2nd Prize at Freiburg Science Congress).</span>
+            </div>
           </div>
         </motion.section>
 
@@ -288,10 +302,18 @@ export default function CVPage() {
           <div className="space-y-4 text-gray-600 dark:text-gray-400">
             <p>
               <a 
-                href="mailto:mathis.dumont@example.com"
+                href="mailto:contact.mathisdumont@gmail.com"
                 className="hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
               >
-                mathis.dumont@example.com
+                contact.mathisdumont@gmail.com
+              </a>
+            </p>
+            <p>
+              <a 
+                href="tel:+33769811080"
+                className="hover:text-gray-900 dark:hover:text-gray-200 transition-colors font-sans"
+              >
+                +33 7 69 81 10 80
               </a>
             </p>
             <div className="flex gap-8 pt-4">

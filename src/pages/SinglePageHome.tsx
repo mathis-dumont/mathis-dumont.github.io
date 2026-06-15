@@ -1,6 +1,41 @@
 import { motion } from 'framer-motion';
 import { projects, currentlyLearning } from '../data/projects';
 
+interface TimelineItemProps {
+  title: string;
+  date: string;
+  subtitle: string;
+  items?: React.ReactNode[];
+}
+
+function TimelineItem({ title, date, subtitle, items = [] }: TimelineItemProps) {
+  return (
+    <div className="border-l border-light-border dark:border-dark-border pl-8">
+      <div className="flex justify-between items-start mb-2">
+        <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
+          {title}
+        </h4>
+        <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
+          {date}
+        </p>
+      </div>
+      <p className="text-light-text dark:text-dark-text mb-4">
+        {subtitle}
+      </p>
+      {items.length > 0 && (
+        <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
+          {items.map((item, i) => (
+            <li key={i} className="flex">
+              <span className="mr-3">-</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 export default function SinglePageHome() {
   const featuredProjects = projects.filter(p => p.category === 'featured');
   const academicProjects = projects.filter(p => p.category === 'academic');
@@ -86,7 +121,7 @@ const getEmbedUrl = (url: string) => {
                 Welcome! I'm Mathis, I build AI systems designed for production.
               </p>
               <p>
-                My focus is on applied GenAI and software engineering. At ArcelorMittal, I developed an agentic LLM pipeline to reverse-engineer legacy Fortran code and worked on defect prediction models. Before that, I shipped full-stack ERP tools that cut operational reporting times from days to seconds.
+                My focus is on applied GenAI and robust machine learning systems. As a Data Scientist Intern at Mirakl, I am currently aligning an open-weights LLM using DPO for catalog automation at scale. At ArcelorMittal, I developed an agentic LLM pipeline to reverse-engineer legacy Fortran code. Before that, I shipped full-stack ERP tools that cut operational reporting times from days to seconds.
               </p>
               <p>
                 I also understand the business side. As Head of Sales at a Junior Enterprise, I managed client projects for partners like Westinghouse and Iridesense. I know how to align complex technical work with actual business requirements.
@@ -320,89 +355,30 @@ const getEmbedUrl = (url: string) => {
                 </h3>
                 
                 <div className="space-y-8">
-                  <div className="border-l border-light-border dark:border-dark-border pl-8">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        MSc Data Science
-                      </h4>
-                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                        2025 - 2026
-                      </p>
-                    </div>
-                    <p className="text-light-text dark:text-dark-text mb-4">
-                      ENSAE Paris
-                    </p>
-                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Main courses: Deep Learning, Natural Language Processing, Reinforcement Learning, Optimal Transport</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border-l border-light-border dark:border-dark-border pl-8">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        MSc Mechanical Engineering
-                      </h4>
-                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                        2022 - 2025
-                      </p>
-                    </div>
-                    <p className="text-light-text dark:text-dark-text mb-4">
-                      Arts & Métiers ParisTech, Metz
-                    </p>
-                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Main courses: Probability, Statistics, Computer Science, Optimization, Mechanics, Energy Systems, Manufacturing</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Ranked 50th/1202</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border-l border-light-border dark:border-dark-border pl-8">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        Exchange Semester
-                      </h4>
-                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                        2024 - 2025
-                      </p>
-                    </div>
-                    <p className="text-light-text dark:text-dark-text mb-4">
-                      Politecnico di Milano, Milan, Italy
-                    </p>
-                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Main courses: Machine Learning, Optimization, Lean Management</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border-l border-light-border dark:border-dark-border pl-8">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        Preparatory Classes
-                      </h4>
-                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                        2020 - 2022
-                      </p>
-                    </div>
-                    <p className="text-light-text dark:text-dark-text mb-4">
-                      Lycée Jean Baptiste Say, Paris
-                    </p>
-                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Two-year intensive program in Mathematics, Physics, and Engineering Sciences, preparing for national competitive entrance exams to top engineering schools</span>
-                      </li>
-                    </ul>
-                  </div>
+                  <TimelineItem 
+                    title="MSc Data Science"
+                    date="2025 - 2026"
+                    subtitle="ENSAE Paris"
+                    items={["Deep Learning, NLP, Reinforcement Learning, Bayesian Statistics, Statistical Learning."]}
+                  />
+                  <TimelineItem 
+                    title="MSc Industrial Engineering"
+                    date="2022 - 2025"
+                    subtitle="Arts & Métiers ParisTech"
+                    items={["Probability, Statistics, Optimization, and Industrial Systems (top 5% of cohort)."]}
+                  />
+                  <TimelineItem 
+                    title="Exchange Semester"
+                    date="2024 - 2025"
+                    subtitle="Politecnico di Milano"
+                    items={["Machine Learning, Dynamic Pricing, Lean Management."]}
+                  />
+                  <TimelineItem 
+                    title="Preparatory Classes"
+                    date="2020 - 2022"
+                    subtitle="Lycée Jean Baptiste Say, Paris"
+                    items={["Intensive Mathematics and Physics."]}
+                  />
                 </div>
               </div>
 
@@ -413,89 +389,37 @@ const getEmbedUrl = (url: string) => {
                 </h3>
 
                 <div className="space-y-12">
-                  <div className="border-l border-light-border dark:border-dark-border pl-8">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        Data Scientist Intern
-                      </h4>
-                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                        Jan. 2025 - Jul. 2025
-                      </p>
-                    </div>
-                    <p className="text-light-text dark:text-dark-text mb-4">
-                      ArcelorMittal, Simulation and Modeling Department
-                    </p>
-                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Developed and evaluated regression and classification models to predict and categorize defects on steel sheets after hot rolling.</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Designed and deployed a multi-agent ML pipeline using Mistral API to analyze and structure Fortran legacy simulation codebases (200k+ lines of code) used in industrial modeling.</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Engineered static analysis and dependency graph synthesis tools in Python.</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Automated documentation generation, reducing onboarding time from weeks to days.</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Technologies: Python, Mistral API, ReAct agents, Scikit-learn, Docker, Fortran AST parsing, S3 AWS.</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border-l border-light-border dark:border-dark-border pl-8">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        Software Engineer Intern
-                      </h4>
-                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                        Jun. 2024 - Sept. 2024
-                      </p>
-                    </div>
-                    <p className="text-light-text dark:text-dark-text mb-4">
-                      Utilys, Mulhouse
-                    </p>
-                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Architected and shipped a full-stack ERP web application replacing legacy tools and centralizing production and sales data for cross-team visibility.</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Improved reporting latency from days to real-time dashboards, enabling faster operational decision-making.</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Technologies: Python, SQL, FastAPI, Flask.</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border-l border-light-border dark:border-dark-border pl-8">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                        Analyst Intern
-                      </h4>
-                      <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                        Jun. 2023 - Jul. 2023
-                      </p>
-                    </div>
-                    <p className="text-light-text dark:text-dark-text mb-4">
-                      EIFFAGE, Fessenheim
-                    </p>
-                    <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                      <li className="flex">
-                        <span className="mr-3">-</span>
-                        <span>Process optimization and maintenance scheduling for industrial equipment.</span>
-                      </li>
-                    </ul>
-                  </div>
+                  <TimelineItem 
+                    title="Data Scientist Intern"
+                    date="Apr. 2026 - present"
+                    subtitle="Mirakl, R&D Team, France"
+                    items={[
+                      "Building a human-in-the-loop feedback system to improve an open-weights LLM that automates seller-product catalog onboarding on a marketplace processing 100M+ events/week.",
+                      "Designed a human feedback collection and evaluation pipeline, applying Direct Preference Optimization (DPO) to align model outputs with catalog-quality requirements, targeting a 20% reduction in automation errors.",
+                      <span key="stack"><strong>Stack:</strong> Python, PyTorch, Hugging Face, DPO, LLM alignment, large-scale data pipelines.</span>
+                    ]}
+                  />
+                  <TimelineItem 
+                    title="Data Scientist Intern"
+                    date="Jan. 2025 - Jul. 2025"
+                    subtitle="ArcelorMittal, R&D Simulation Dept., France"
+                    items={[
+                      "Designed and deployed a multi-agent LLM system (Mistral ReAct + tool orchestration) to reverse-engineer big (200k+ lines of code) legacy Fortran codebases.",
+                      "Engineered static analysis and dependency graph synthesis tools in Python.",
+                      "Automated documentation generation, reducing onboarding time from weeks to days and presented results directly to David Glijer (CDO).",
+                      <span key="stack"><strong>Stack:</strong> Python, Mistral API, ReAct agents, Scikit-learn, Docker, Fortran AST parsing, S3 AWS.</span>
+                    ]}
+                  />
+                  <TimelineItem 
+                    title="Software Engineer Intern"
+                    date="Jun. 2024 - Sept. 2024"
+                    subtitle="Utilys, France"
+                    items={[
+                      "Architected and shipped a full-stack ERP web application replacing legacy tools and centralizing production and sales data for cross-team visibility.",
+                      "Improved reporting latency from days to real-time dashboards, enabling faster operational decision-making.",
+                      <span key="stack"><strong>Stack:</strong> Python, SQL, FastAPI.</span>
+                    ]}
+                  />
                 </div>
               </div>
 
@@ -505,37 +429,14 @@ const getEmbedUrl = (url: string) => {
                   Volunteering
                 </h3>
 
-                <div className="border-l border-light-border dark:border-dark-border pl-8">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="text-xl font-serif text-light-text dark:text-dark-text">
-                      Head of Sales
-                    </h4>
-                    <p className="text-light-muted dark:text-dark-muted text-sm font-sans ml-4 whitespace-nowrap">
-                      Feb. 2023 - Jun. 2025
-                    </p>
-                  </div>
-                  <p className="text-light-text dark:text-dark-text mb-4">
-                    Arts & Métiers Junior Enterprise (AMJE)
-                  </p>
-                  <ul className="space-y-2 text-light-text dark:text-dark-text leading-relaxed">
-                    <li className="flex">
-                      <span className="mr-3">-</span>
-                      <span>Developed maintenance solutions for steam generators for Westinghouse France</span>
-                    </li>
-                    <li className="flex">
-                      <span className="mr-3">-</span>
-                      <span>Designed a graphical interface for a LiDAR system for the startup Iridesense</span>
-                    </li>
-                    <li className="flex">
-                      <span className="mr-3">-</span>
-                      <span>Co-organized the event "Reindustrialize France": 4 conferences, 1 hackathon, 300 participants</span>
-                    </li>
-                    <li className="flex">
-                      <span className="mr-3">-</span>
-                      <span>Achievements: awarded Best Junior Enterprise in France (2024), €250,000 turnover, 60 projects completed</span>
-                    </li>
-                  </ul>
-                </div>
+                <TimelineItem 
+                  title="Head of Sales"
+                  date="2023 - 2025"
+                  subtitle="Arts & Métiers Junior Enterprise (AMJE)"
+                  items={[
+                    <span key="amje">Managed client relations for France's #1 Junior Enterprise (<strong>€250k turnover</strong>); led missions for <strong>Westinghouse</strong> (Steam generators) and <strong>Iridesense</strong> (LiDAR UI) and organized "Reindustrialize France Seminar" (300 participants).</span>
+                  ]}
+                />
               </div>
             </div>
           </motion.div>

@@ -15,12 +15,11 @@ export default function Hero() {
           
           <div className="space-y-8 text-lg md:text-xl leading-loose">
             <p className="text-gray-700 dark:text-gray-300">
-              Bridging the gap between statistical rigor and industrial engineering.
+              ENSAE Paris & Arts et Métiers Engineer | Data Scientist Intern @ Mirakl, LLM alignment at scale.
             </p>
 
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
-              Dual-degree student at ENSAE Paris and Arts & Métiers, exploring agentic 
-              frameworks, advanced RAG architectures, and production-ready machine learning systems.
+              Builder mindset, passionate about ML research.
             </p>
           </div>
 
@@ -42,7 +41,7 @@ export default function Hero() {
               LinkedIn
             </a>
             <a
-              href="mailto:mathis.dumont@example.com"
+              href="mailto:contact.mathisdumont@gmail.com"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors text-sm font-sans"
             >
               Email
