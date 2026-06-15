@@ -8,31 +8,29 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['EB Garamond', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['Lora', 'Georgia', 'serif'],
+        mono: ['DM Mono', 'monospace'],
       },
       colors: {
-        // Light mode - Off-white surface, charcoal text
         light: {
-          bg: '#F9FAFB',
-          surface: '#F5F7FA',
-          text: '#1F2937',
-          muted: '#6B7280',
-          border: '#D1D5DB',
+          bg:      '#EDE8DF',
+          sidebar: '#E3DDD3',
+          text:    '#1C1714',
+          muted:   '#7D6B5E',
+          border:  '#CFC5B5',
+          accent:  '#8B5E3C',
         },
-        // Dark mode - Material Design dark grey, soft white text
         dark: {
-          bg: '#121212',
-          surface: '#1E1E1E',
-          text: '#F3F4F6',
-          muted: '#9CA3AF',
-          border: '#374151',
-        }
+          bg:      '#1A1714',
+          sidebar: '#141210',
+          text:    '#EDE8DF',
+          muted:   '#7D6B5E',
+          border:  '#2E2822',
+          accent:  '#C4833A',
+        },
       },
-      lineHeight: {
-        'relaxed': '1.75',
-        'loose': '2',
-      }
     },
   },
   plugins: [],
