@@ -5,17 +5,9 @@ export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    // Force dark mode by default unless user has explicitly chosen light
-    let isDarkMode = true;
-    if (localStorage.theme === 'light') {
-      isDarkMode = false;
-    }
+    const isDarkMode = localStorage.theme !== 'light';
     setIsDark(isDarkMode);
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', isDarkMode);
   }, []);
 
   const toggleDarkMode = () => {

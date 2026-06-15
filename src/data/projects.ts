@@ -10,6 +10,7 @@ export interface Project {
   pdf?: string;
   video?: string;
   award?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -112,51 +113,18 @@ export const projects: Project[] = [
       "Used LoRaWAN for reliable data transmission in remote areas.",
       "Won 2nd Prize at the 12th Trinational Congress of Natural Sciences and Technology."
     ],
-    award: "2nd Prize - 12th Trinational Congress of Natural Sciences and Technology, Freiburg"
+    award: "2nd Prize - 12th Trinational Congress of Natural Sciences and Technology, Freiburg",
+    image: "/images/rod.png"
   }
 ];
-
-export const skills = {
-  ai: [
-    "LangChain / LangGraph",
-    "RAG Systems",
-    "Fine-tuning (LoRA, QLoRA)",
-    "Prompt Engineering",
-    "PyTorch",
-    "Hugging Face"
-  ],
-  ml: [
-    "XGBoost / LightGBM",
-    "Scikit-learn",
-    "Feature Engineering",
-    "MLOps",
-    "Model Deployment"
-  ],
-  engineering: [
-    "Python",
-    "FastAPI / Flask",
-    "Docker",
-    "PostgreSQL / MongoDB",
-    "Git / GitHub Actions",
-    "Linux"
-  ],
-  frontend: [
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Vite"
-  ]
-};
 
 export const currentlyLearning = [
   {
     title: "Building GPT-2 from Scratch",
     source: "Andrej Karpathy's series",
-    progress: "In progress"
   },
   {
     title: "Advanced Transformer Architectures",
     source: "Papers & implementations",
-    progress: "In progress"
   }
 ];
