@@ -23,33 +23,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <motion.article
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1, delay: index * 0.08 }}
-      className="border-b border-light-border dark:border-dark-border pb-14 last:border-0"
+      initial={{ opacity: 0, y: 14 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.6, delay: index * 0.05 }}
+      className="border-b border-line pb-12 last:border-0 last:pb-0"
     >
-      <div className="flex items-baseline justify-between gap-4 mb-4">
-        <h3 className="font-display font-light text-2xl sm:text-3xl text-light-text dark:text-dark-text leading-tight">
-          {project.title}
-        </h3>
-        <span className="font-mono text-[10px] text-light-muted dark:text-dark-muted tracking-widest shrink-0">
-          {String(index + 1).padStart(2, '0')}
-        </span>
-      </div>
+      <h3 className="font-display font-normal text-[1.6rem] sm:text-3xl text-ink leading-tight mb-3">
+        {project.title}
+      </h3>
 
       {project.award && (
-        <p className="font-mono text-xs text-light-muted dark:text-dark-muted italic mb-4">{project.award}</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-accent mb-4">
+          {project.award}
+        </p>
       )}
 
-      <p className="font-sans text-light-text dark:text-dark-text leading-relaxed mb-5 text-[15px]">
+      <p className="font-body text-[16px] text-ink leading-[1.7] mb-5 max-w-2xl">
         {project.description}
       </p>
 
-      <ul className="space-y-2 mb-5">
+      <ul className="space-y-2 mb-6 max-w-2xl">
         {project.highlights.map((highlight, i) => (
-          <li key={i} className="flex gap-3 text-[14px] font-sans text-light-muted dark:text-dark-muted leading-relaxed">
-            <span className="mt-[0.55em] w-3 h-px bg-light-border dark:bg-dark-border flex-shrink-0" />
+          <li key={i} className="flex gap-3 text-[15px] font-body text-muted leading-[1.65]">
+            <span className="mt-[0.6em] w-[3px] h-[3px] rounded-full bg-faint flex-shrink-0" />
             <span>{highlight}</span>
           </li>
         ))}
@@ -64,7 +61,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 href={project[key] as string}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[11px] uppercase tracking-[0.12em] text-light-muted dark:text-dark-muted hover:text-light-text dark:hover:text-dark-text transition-colors duration-300"
+                className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink hover:text-accent transition-colors duration-300"
               >
                 {label} →
               </a>
@@ -77,7 +74,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="font-mono text-[10px] uppercase tracking-[0.1em] text-light-muted dark:text-dark-muted border border-light-border dark:border-dark-border px-2.5 py-1"
+            className="font-mono text-[10px] tracking-[0.04em] text-muted border border-line rounded-full px-2.5 py-1"
           >
             {tag}
           </span>
@@ -85,7 +82,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
 
       {project.video && (
-        <div className="mt-8 w-full aspect-video bg-light-surface dark:bg-dark-surface overflow-hidden">
+        <div className="mt-7 w-full aspect-video bg-raised rounded-md overflow-hidden border border-line">
           <iframe
             width="100%"
             height="100%"
@@ -102,7 +99,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <img
           src={project.image}
           alt={project.title}
-          className="w-56 mt-6 mx-auto block border border-light-border dark:border-dark-border"
+          className="w-56 mt-6 rounded-md border border-line"
         />
       )}
     </motion.article>

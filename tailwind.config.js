@@ -8,28 +8,19 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Cormorant Garamond', 'Georgia', 'serif'],
-        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-        body: ['Lora', 'Georgia', 'serif'],
-        mono: ['DM Mono', 'monospace'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
+        body: ['Hanken Grotesk', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
-        light: {
-          bg:      '#EDE8DF',
-          sidebar: '#E3DDD3',
-          text:    '#1C1714',
-          muted:   '#7D6B5E',
-          border:  '#CFC5B5',
-          accent:  '#8B5E3C',
-        },
-        dark: {
-          bg:      '#1A1714',
-          sidebar: '#141210',
-          text:    '#EDE8DF',
-          muted:   '#7D6B5E',
-          border:  '#2E2822',
-          accent:  '#C4833A',
-        },
+        paper:  'rgb(var(--c-paper) / <alpha-value>)',   // warm bg
+        raised: 'rgb(var(--c-raised) / <alpha-value>)',  // cards / insets
+        ink:    'rgb(var(--c-ink) / <alpha-value>)',     // primary text
+        muted:  'rgb(var(--c-muted) / <alpha-value>)',   // secondary text
+        faint:  'rgb(var(--c-faint) / <alpha-value>)',   // tertiary
+        line:   'rgb(var(--c-line) / <alpha-value>)',    // hairlines
+        accent: 'rgb(var(--c-accent) / <alpha-value>)',  // oxblood — links / active only
       },
     },
   },

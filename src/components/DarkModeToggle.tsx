@@ -1,39 +1,24 @@
-import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(true);
+  // Initial value is set by the inline script in index.html (no flash on load).
+  const [dark, setDark] = useState(
+    typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
+  );
 
   useEffect(() => {
-    const isDarkMode = localStorage.theme !== 'light';
-    setIsDark(isDarkMode);
-    document.documentElement.classList.toggle('dark', isDarkMode);
-  }, []);
-
-  const toggleDarkMode = () => {
-    const newMode = !isDark;
-    setIsDark(newMode);
-    
-    if (newMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-    }
-  };
+    document.documentElement.classList.toggle('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }, [dark]);
 
   return (
     <button
-      onClick={toggleDarkMode}
-      className="p-2 rounded-full hover:bg-light-border dark:hover:bg-dark-border transition-colors"
-      aria-label="Toggle dark mode"
+      onClick={() => setDark(v => !v)}
+      aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="text-muted hover:text-ink transition-colors duration-300"
     >
-      {isDark ? (
-        <Sun className="text-light-text dark:text-dark-text" size={18} />
-      ) : (
-        <Moon className="text-light-text dark:text-dark-text" size={18} />
-      )}
+      {dark ? <Sun size={15} strokeWidth={1.5} /> : <Moon size={15} strokeWidth={1.5} />}
     </button>
   );
 }
