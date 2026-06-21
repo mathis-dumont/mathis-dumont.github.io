@@ -51,7 +51,7 @@ export default function Hero() {
           >
             <div className="mt-7 w-12 h-px bg-accent" />
             <p className="mt-6 font-body text-lg sm:text-xl text-ink leading-snug max-w-md">
-              ML engineer. I take language models from a research idea to something running in production.
+              Hi, I'm Mathis. I'm an ML engineer, and I spend my time getting language models to solve real business problems.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2">

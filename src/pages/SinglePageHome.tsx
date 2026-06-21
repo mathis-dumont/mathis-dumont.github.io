@@ -72,9 +72,6 @@ export default function SinglePageHome() {
         <FadeIn>
           <Eyebrow>About</Eyebrow>
           <div className="max-w-2xl space-y-5">
-            <p className="font-display font-normal text-2xl sm:text-[1.7rem] leading-snug text-ink">
-              I'm Mathis, an ML engineer working on applied GenAI.
-            </p>
             <p className="font-body text-[16px] text-muted leading-[1.75]">
               Right now I'm a Data Scientist intern at Mirakl, aligning an open-weights LLM with DPO to automate catalog onboarding on a marketplace that handles over 100M events a week. Before that, at ArcelorMittal, I built a multi-agent LLM pipeline to reverse-engineer 200k+ lines of legacy Fortran.
             </p>
