@@ -1,29 +1,35 @@
 # Mathis Dumont - Portfolio
 
-Personal portfolio website showcasing AI/ML projects and engineering work.
+Personal portfolio: <https://mathis-dumont.github.io/>
 
-## Tech Stack
+## Stack
 
-Built with React, TypeScript, and Vite. Styling is handled via Tailwind CSS, with animations powered by Framer Motion.
+None. Hand-written HTML and one CSS file, plus one script for the homepage
+background animation. No build step, no dependencies.
 
-## Project Organization
+## Structure
 
-The source code is organized within the `src` directory:
+Everything published lives in `site/`:
 
-- **components/**: Contains the main UI sections (Hero, Projects, Skills) and reusable interface elements.
-- **data/**: Contains `projects.ts`, which serves as the single source of truth for all project data and content.
-- **pages/**: Individual page layouts used for routing.
-- **App.tsx**: Main application layout.
+- `index.html` — intro, about, skills
+- `work.html` — projects
+- `cv.html` — experience, education, volunteering, currently learning
+- `styles.css` — all styling; the palette is the variables at the top
+- `bg.js` — a DPO training log typing itself in the bottom of the left margin;
+  index only, hidden when the margin is under 250px and when printing
+- `images/`, `documents/`, `favicon.svg`, `robots.txt`, `sitemap.xml`
+
+The head and bottom nav bar are duplicated across the three pages. Editing one means
+editing the other two.
 
 ## Development
 
+Open `site/index.html` in a browser, or serve it so root-absolute paths resolve:
+
 ```bash
-# Install dependencies
-npm install
-
-# Start local development server
-npm run dev
-
-# Build for production
-npm run build
+python3 -m http.server -d site 8000
 ```
+
+## Deployment
+
+Pushing to `main` publishes `site/` to GitHub Pages via `.github/workflows/deploy.yml`.
