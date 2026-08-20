@@ -7,7 +7,7 @@
   --dim:    #6b7280;
   --border: #1a1a1a;
   --rule:   #262626;
-  --accent: #f59e0b;
+  --accent: #4ade80;
 
   /* Type scale. Everything you read is one size; box labels are one size;
      entry headings are one size. Only the name in the hero is display type. */
@@ -285,7 +285,7 @@ footer {
     --dim:    #444;
     --border: #999;
     --rule:   #ccc;
-    --accent: #8a5300;
+    --accent: #0b6b3a;
     color-scheme: light;
     font-size: 10.5pt;
   }
