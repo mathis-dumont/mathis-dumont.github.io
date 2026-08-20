@@ -111,13 +111,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 .rows li::before { content: '-'; color: var(--accent); opacity: 0.5; }
 .rows { font-size: 0.875rem; }
 .rows b { color: var(--dim); margin-right: 0.4rem; }
+
+/* In the awards list the bold half carries the substance, so it stays bright */
+.rows.awards b { color: var(--fg); }
 .rows span { color: var(--fg); opacity: 0.8; }
 
 /* bulleted detail lines */
 .bullets li { position: relative; padding-left: 1.1rem; margin-bottom: 0.5rem; color: var(--fg); opacity: 0.9; font-size: 0.875rem; }
 .bullets li::before { content: '-'; position: absolute; left: 0; color: var(--accent); opacity: 0.5; }
 .bullets li:last-child { margin-bottom: 0; }
-.bullets .stack { color: var(--fg); }
+.bullets .stack { color: var(--fg); font-weight: 700; }
 
 /* --- Entries (projects, CV items) -------------------------------------- */
 
@@ -142,6 +145,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .date { color: var(--dim); font-size: 0.8125rem; white-space: nowrap; }
 
 .subtitle { color: var(--dim); font-size: 0.875rem; margin: 0 0 0.75rem; }
+
+/* One-line note on a company, and a detail line with no bullet marker */
+.blurb { color: var(--dim); font-style: italic; font-size: 0.8125rem; margin: -0.5rem 0 0.75rem; }
+.detail { color: var(--fg); opacity: 0.9; font-size: 0.875rem; margin: 0 0 0.75rem; }
 
 .award { color: var(--accent); font-size: 0.8125rem; margin: 0 0 0.75rem; }
 
