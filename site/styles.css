@@ -8,6 +8,14 @@
   --border: #1a1a1a;
   --rule:   #262626;
   --accent: #4ade80;
+
+  /* Type scale. Everything you read is one size; box labels are one size;
+     entry headings are one size. Only the name in the hero is display type. */
+  --fs-text:  0.9375rem;
+  --fs-label: 1rem;
+  --fs-title: 1.25rem;
+  --fs-name:  clamp(1.5rem, 5vw, 2.25rem);
+
   color-scheme: dark;
 }
 
@@ -57,6 +65,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.25; }
    not content, so it stays out of the copyable text. */
 .box-name {
   color: var(--dim);
+  font-size: var(--fs-label);
   border-bottom: 1px solid var(--rule);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
@@ -88,7 +97,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.25; }
 
 .hero h1 {
   color: var(--accent);
-  font-size: clamp(1.25rem, 6vw, 2.25rem);
+  font-size: var(--fs-name);
   margin-bottom: 0.75rem;
 }
 
@@ -96,7 +105,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.25; }
 .meta a[href^='mailto:'] { color: var(--fg); }
 
 /* key: value lines */
-.meta { margin: 0; font-size: 0.875rem; overflow-wrap: anywhere; }
+.meta { margin: 0; font-size: var(--fs-text); overflow-wrap: anywhere; }
 .meta dt { display: inline; color: var(--dim); }
 .meta dd { display: inline; margin: 0 0 0 0.4rem; }
 .meta div + div { margin-top: 0.25rem; }
@@ -109,7 +118,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .rows li { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; }
 .rows li:last-child { margin-bottom: 0; }
 .rows li::before { content: '-'; color: var(--accent); opacity: 0.5; }
-.rows { font-size: 0.875rem; }
+.rows { font-size: var(--fs-text); }
 .rows b { color: var(--dim); margin-right: 0.4rem; }
 
 /* In the awards list the bold half carries the substance, so it stays bright */
@@ -117,7 +126,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .rows span { color: var(--fg); opacity: 0.8; }
 
 /* bulleted detail lines */
-.bullets li { position: relative; padding-left: 1.1rem; margin-bottom: 0.5rem; color: var(--fg); opacity: 0.9; font-size: 0.875rem; }
+.bullets li { position: relative; padding-left: 1.1rem; margin-bottom: 0.5rem; color: var(--fg); opacity: 0.9; font-size: var(--fs-text); }
 .bullets li::before { content: '-'; position: absolute; left: 0; color: var(--accent); opacity: 0.5; }
 .bullets li:last-child { margin-bottom: 0; }
 .bullets .stack { color: var(--fg); font-weight: 700; }
@@ -129,7 +138,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .entry h2, .entry h3 {
   color: var(--accent);
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-size: var(--fs-title);
   margin-bottom: 0.35rem;
 }
 
@@ -142,15 +151,15 @@ ul { margin: 0; padding: 0; list-style: none; }
   flex-wrap: wrap;
 }
 
-.date { color: var(--dim); font-size: 0.8125rem; white-space: nowrap; }
+.date { color: var(--dim); font-size: var(--fs-text); white-space: nowrap; }
 
-.subtitle { color: var(--dim); font-size: 0.875rem; margin: 0 0 0.75rem; }
+.subtitle { color: var(--dim); font-size: var(--fs-text); margin: 0 0 0.75rem; }
 
 /* One-line note on a company, and a detail line with no bullet marker */
-.blurb { color: var(--dim); font-style: italic; font-size: 0.8125rem; margin: -0.5rem 0 0.75rem; }
-.detail { color: var(--fg); opacity: 0.9; font-size: 0.875rem; margin: 0 0 0.75rem; }
+.blurb { color: var(--dim); font-style: italic; font-size: var(--fs-text); margin: -0.5rem 0 0.75rem; }
+.detail { color: var(--fg); opacity: 0.9; font-size: var(--fs-text); margin: 0 0 0.75rem; }
 
-.award { color: var(--accent); font-size: 0.8125rem; margin: 0 0 0.75rem; }
+.award { color: var(--accent); font-size: var(--fs-text); margin: 0 0 0.75rem; }
 
 .entry p { margin: 0 0 0.75rem; }
 
@@ -158,11 +167,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .tags li {
   border: 1px solid var(--rule);
   color: var(--dim);
-  font-size: 0.75rem;
-  padding: 0.15rem 0.5rem;
+  font-size: var(--fs-text);
+  padding: 0.1rem 0.5rem;
 }
 
-.links { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 0.75rem; font-size: 0.875rem; }
+.links { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 0.75rem; font-size: var(--fs-text); }
 
 .embed {
   width: 100%;
@@ -200,7 +209,7 @@ footer {
 
 .bar nav a {
   color: var(--fg);
-  font-size: 0.875rem;
+  font-size: var(--fs-text);
   padding: 0.5rem 0.9rem;
   transition: color 0.15s;
 }
@@ -276,9 +285,10 @@ footer {
     --rule:   #ccc;
     --accent: #0b6b3a;
     color-scheme: light;
+    font-size: 10.5pt;
   }
 
-  body { padding: 0; font-size: 11pt; }
+  body { padding: 0; }
   main { max-width: none; }
 
   /* The canvas has no clipping context on paper, so it prints across the
