@@ -120,9 +120,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .rows li::before { content: '-'; color: var(--accent); opacity: 0.5; }
 .rows { font-size: var(--fs-text); }
 .rows b { color: var(--dim); margin-right: 0.4rem; }
-
-/* In the awards list the bold half carries the substance, so it stays bright */
-.rows.awards b { color: var(--fg); }
 .rows span { color: var(--fg); opacity: 0.8; }
 
 /* bulleted detail lines */
