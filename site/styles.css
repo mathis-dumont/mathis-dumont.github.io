@@ -260,11 +260,17 @@ footer {
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+/* Once the column narrows, the metadata wraps onto more lines and the box
+   grows taller than it is wide. A stretched photo would become a sliver, so
+   below this width it holds a square and sits at the top. */
+@media (max-width: 48rem) {
+  .hero img { width: 33%; aspect-ratio: 1; align-self: flex-start; }
+}
+
 @media (max-width: 30rem) {
   body { padding-top: 1.5rem; padding-left: 0.75rem; padding-right: 0.75rem; }
   .box { padding: 1.25rem; }
   .hero-body { padding: 1rem; }
-  .hero img { width: 33%; aspect-ratio: 1; align-self: flex-start; }
 }
 
 /* --- Print ------------------------------------------------------------- */
