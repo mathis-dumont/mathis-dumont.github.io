@@ -15,8 +15,8 @@ Everything published lives in `site/`:
 - `work.html` — projects
 - `cv.html` — experience, education, volunteering, currently learning
 - `styles.css` — all styling; the palette is the variables at the top
-- `bg.js` — a DPO training log typing itself in the bottom of the left margin;
-  index only, hidden when the margin is under 250px and when printing
+- `bg.js` — a training log typing itself in the bottom of the left margin;
+  index only, hidden when the margin cannot fit it and when printing
 - `images/`, `documents/`, `favicon.svg`, `robots.txt`, `sitemap.xml`
 
 The head and bottom nav bar are duplicated across the three pages. Editing one means

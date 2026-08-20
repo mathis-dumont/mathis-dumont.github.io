@@ -14,15 +14,15 @@
   const SPEED = 38;            // ms per character
 
   const LINES = [
-    '$ train.py --method dpo',
-    'loading 9,692 pairs',
+    '$ python train.py',
+    'loading 9,692 samples',
     'epoch 1/5   loss 0.6931',
     'epoch 2/5   loss 0.5107',
     'epoch 3/5   loss 0.3862',
     'epoch 4/5   loss 0.2934',
     'epoch 5/5   loss 0.2418',
-    'eval  win rate 0.81',
-    'saved -> dpo/best.pt'
+    'eval  accuracy 0.91',
+    'saved -> model.pt'
   ];
 
   let x, w, h, left, baseY, visible, frame;
