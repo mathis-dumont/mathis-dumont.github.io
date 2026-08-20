@@ -12,6 +12,7 @@
   let SIZE = 11;               // type size, reduced if the margin is tight
   let LH = 17;                 // line height
   const SPEED = 38;            // ms per character
+  const REPLAY = 30000;        // ms the finished run stands before typing again
 
   const LINES = [
     '$ python train.py',
@@ -26,7 +27,7 @@
   ];
 
   let x, w, h, left, baseY, visible, frame;
-  let li = 0, ci = 0, shown = [], last = 0, done = false, blink;
+  let li = 0, ci = 0, shown = [], last = 0, done = false, blink, replay;
 
   function layout() {
     const d = window.devicePixelRatio || 1;
@@ -82,15 +83,23 @@
     ci++;
     if (ci > LINES[li].length) {
       shown.push(LINES[li]); li++; ci = 0;
-      // The run is typed once and then left standing; only the cursor keeps
-      // moving, on a timer rather than a frame loop.
+      // The run stands finished for a while, with only the cursor moving on a
+      // timer rather than a frame loop, then types itself again.
       if (li >= LINES.length) {
         done = true;
         cancelAnimationFrame(frame); frame = null;
         clearInterval(blink);
-        blink = setInterval(() => draw(performance.now()), 500);
+        blink = setInterval(() => { if (visible) draw(performance.now()); }, 500);
+        clearTimeout(replay);
+        replay = setTimeout(restart, REPLAY);
       }
     }
+  }
+
+  function restart() {
+    clearInterval(blink); blink = null;
+    shown = []; li = 0; ci = 0; last = 0; done = false;
+    if (visible && !frame) run(performance.now());
   }
 
   function run(t) {
