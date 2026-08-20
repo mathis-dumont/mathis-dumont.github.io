@@ -93,7 +93,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.25; }
   align-self: stretch;
   /* The only colour on the page fought the palette, and the studio backdrop
      glared against the near-black. Grey and slightly dimmed, it belongs. */
-  filter: grayscale(1) brightness(0.86) contrast(1.22);
+  filter: grayscale(1) brightness(0.92) contrast(1.06);
 }
 
 .hero-body { flex: 1; padding: 1.25rem 1.5rem; min-width: 0; position: relative; z-index: 1; }
