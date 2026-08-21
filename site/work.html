@@ -39,6 +39,7 @@
         <div class="box-name" aria-hidden="true">work.md</div>
         <h1 id="work" class="sr-only">Selected work</h1>
 
+
         <article class="entry">
           <h2>Multi-Agent Documentation System</h2>
           <p>This tool converts source code into technical documentation. It uses Mistral agents to map logic and dependencies. Using the ReAct framework, the agents reason about the architecture rather than just reading files. It generates interactive diagrams and a full codebase overview.</p>
@@ -62,6 +63,19 @@
         </article>
 
         <article class="entry">
+          <h2>Insurance Churn Prediction &amp; NLP</h2>
+          <p class="subtitle">Alptis, year-long client project, ENSAE Paris</p>
+          <p>Alptis is a French welfare insurance broker. The work consisted of forecasting which policyholders would leave within six months, early enough for retention teams to act.</p>
+          <ul class="bullets">
+            <li>Merged structured records, consumption, unpaid bills, CRM history, with unstructured emails and claims.</li>
+            <li>Pulled churn signals out of customer correspondence using Hugging Face models for information extraction.</li>
+            <li>Structured the whole pipeline as object-oriented Python, from ingestion through to a six-month churn score.</li>
+          </ul>
+          <p class="detail">Code and data remain proprietary to Alptis.</p>
+          <ul class="tags"><li>Churn Prediction</li><li>NLP</li><li>Hugging Face</li><li>Scikit-learn</li><li>Pandas</li><li>SQL</li></ul>
+        </article>
+
+        <article class="entry">
           <h2>Steam Review Generation: LoRA vs. Prompt Engineering</h2>
           <p>I compared how small LLMs like TinyLlama 1.1B handle text generation. I tested zero-shot, prompt engineering, and LoRA fine-tuning. The results showed that complex prompts increase hallucinations in small models. Fine-tuning improved accuracy by 34% over prompting.</p>
           <ul class="bullets">
@@ -76,35 +90,42 @@
           <ul class="tags"><li>TinyLlama</li><li>LoRA</li><li>Fine-tuning</li><li>LLM-as-a-Judge</li><li>Mistral</li><li>SBERT</li></ul>
         </article>
 
-        <article class="entry">
-          <h2>Horse Racing Prediction Platform</h2>
-          <p>This platform automates the lifecycle of horse racing predictions. It handles daily data scraping and generates bet recommendations. The system uses XGBoost to find value bets by comparing model probabilities against market odds.</p>
-          <ul class="bullets">
-            <li>Automated ETL tasks via GitHub Actions to keep the Supabase database updated.</li>
-            <li>Algorithmic betting module that identifies discrepancies in bookmaker odds.</li>
-            <li>Decoupled architecture using FastAPI for the model and Streamlit for the UI.</li>
-            <li>Containerized deployment using Docker and Makefiles.</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/mathis-dumont/horse-racing-prediction" target="_blank" rel="noopener noreferrer">Code →</a>
-          </div>
-          <ul class="tags"><li>XGBoost</li><li>Streamlit</li><li>FastAPI</li><li>Supabase</li><li>GitHub Actions</li><li>Docker</li><li>ETL</li></ul>
-        </article>
 
-        <article class="entry">
-          <h2>Multimodal RAG System</h2>
-          <p>This RAG system processes technical documents with both text and images. It uses Mistral Vision to describe charts, making them searchable via text queries. It features semantic chunking and incremental indexing to keep the knowledge base current.</p>
-          <ul class="bullets">
-            <li>Integrated Mistral Vision to caption visual data for semantic retrieval.</li>
-            <li>Used spaCy-based semantic chunking to preserve context in retrieved segments.</li>
-            <li>Built an incremental FAISS pipeline with automated Word-to-PDF conversion.</li>
-            <li>Implemented a citation system that links every answer to a specific page.</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/mathis-dumont/advanced_rag" target="_blank" rel="noopener noreferrer">Code →</a>
-          </div>
-          <ul class="tags"><li>Multimodal RAG</li><li>Mistral Vision</li><li>FAISS</li><li>spaCy</li><li>Streamlit</li><li>PyMuPDF</li></ul>
-        </article>
+        <details class="more">
+          <summary>
+            <span class="more-open">show 2 more projects</span>
+            <span class="more-close">hide</span>
+          </summary>
+          <article class="entry">
+            <h2>Horse Racing Prediction Platform</h2>
+            <p>This platform automates the lifecycle of horse racing predictions. It handles daily data scraping and generates bet recommendations. The system uses XGBoost to find value bets by comparing model probabilities against market odds.</p>
+            <ul class="bullets">
+              <li>Automated ETL tasks via GitHub Actions to keep the Supabase database updated.</li>
+              <li>Algorithmic betting module that identifies discrepancies in bookmaker odds.</li>
+              <li>Decoupled architecture using FastAPI for the model and Streamlit for the UI.</li>
+              <li>Containerized deployment using Docker and Makefiles.</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/mathis-dumont/horse-racing-prediction" target="_blank" rel="noopener noreferrer">Code →</a>
+            </div>
+            <ul class="tags"><li>XGBoost</li><li>Streamlit</li><li>FastAPI</li><li>Supabase</li><li>GitHub Actions</li><li>Docker</li><li>ETL</li></ul>
+          </article>
+
+          <article class="entry">
+            <h2>Multimodal RAG System</h2>
+            <p>This RAG system processes technical documents with both text and images. It uses Mistral Vision to describe charts, making them searchable via text queries. It features semantic chunking and incremental indexing to keep the knowledge base current.</p>
+            <ul class="bullets">
+              <li>Integrated Mistral Vision to caption visual data for semantic retrieval.</li>
+              <li>Used spaCy-based semantic chunking to preserve context in retrieved segments.</li>
+              <li>Built an incremental FAISS pipeline with automated Word-to-PDF conversion.</li>
+              <li>Implemented a citation system that links every answer to a specific page.</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/mathis-dumont/advanced_rag" target="_blank" rel="noopener noreferrer">Code →</a>
+            </div>
+            <ul class="tags"><li>Multimodal RAG</li><li>Mistral Vision</li><li>FAISS</li><li>spaCy</li><li>Streamlit</li><li>PyMuPDF</li></ul>
+          </article>
+        </details>
       </section>
 
       <section class="box" aria-labelledby="academic">
@@ -137,6 +158,26 @@
           </ul>
           <ul class="tags"><li>IoT</li><li>Embedded Systems</li><li>ESP8266</li><li>LoRaWAN</li><li>Sensors</li><li>Remote Monitoring</li></ul>
         </article>
+
+        <details class="more">
+          <summary>
+            <span class="more-open">show 1 more project</span>
+            <span class="more-close">hide</span>
+          </summary>
+          <article class="entry">
+            <h3>Adversarial Robustness in Traffic Sign Recognition</h3>
+            <p>This study measures how far traffic sign classifiers can be pushed before they break. CNN, MLP, and VAE-based models are attacked with FGSM and PGD on the GTSRB benchmark, then defended three ways: feature squeezing, VAE input purification, and adversarial training. It is a direct read on the trade-off between clean accuracy and robustness.</p>
+            <ul class="bullets">
+              <li>CNNs beat MLPs on clean data, yet proved just as vulnerable to gradient-based attacks.</li>
+              <li>Caught gradient masking in the VAE classifier: robust against transfer attacks, collapsing under white-box access.</li>
+              <li>Built an attack transfer matrix showing how poorly attacks carry across architectures.</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/mathis-dumont/traffic-sign" target="_blank" rel="noopener noreferrer">Code →</a>
+            </div>
+            <ul class="tags"><li>Adversarial ML</li><li>PyTorch</li><li>FGSM</li><li>PGD</li><li>VAE</li><li>GTSRB</li></ul>
+          </article>
+        </details>
       </section>
     </main>
 

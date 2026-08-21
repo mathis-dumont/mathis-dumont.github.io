@@ -172,6 +172,38 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .links { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 0.75rem; font-size: var(--fs-text); }
 
+/* Tail of a list of entries, folded away. Native <details>, so it needs no
+   JS and stays keyboard-reachable. The rule closes off the list above it, and
+   the '$' marks the line as a command to run -- '>' is already the file label. */
+.more {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.25rem;
+}
+
+.more > summary {
+  color: var(--dim);
+  font-size: var(--fs-text);
+  cursor: pointer;
+  list-style: none;
+  width: fit-content;
+}
+
+.more > summary::-webkit-details-marker { display: none; }
+
+.more > summary::before {
+  content: '$ ';
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.more > summary:hover { color: var(--fg); }
+.more > summary:hover span { text-decoration: underline; }
+
+.more:not([open]) .more-close,
+.more[open] .more-open { display: none; }
+
+.more[open] > summary { margin-bottom: 1.5rem; }
+
 .embed {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -323,6 +355,11 @@ footer {
 
   .box { break-inside: avoid; page-break-inside: avoid; }
   .entry { break-inside: avoid; page-break-inside: avoid; }
+
+  /* A folded entry still belongs on paper. */
+  .more { border-top: 0; padding-top: 0; }
+  .more > summary { display: none; }
+  .more::details-content { content-visibility: visible; }
   .box-name { break-after: avoid; }
 
   .embed { display: none; }
