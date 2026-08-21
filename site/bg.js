@@ -1,4 +1,4 @@
-/* A DPO training run printing itself in the bottom of the left margin.
+/* A training run printing itself at the bottom of the left margin.
    Decoration only: it is hidden whenever the margin is too narrow to hold it,
    and it never sits behind the text. */
 (function () {
