@@ -42,12 +42,12 @@
 
         <article class="entry">
           <h2>Multi-Agent Documentation System</h2>
-          <p>This tool converts source code into technical documentation. It uses Mistral agents to map logic and dependencies. Using the ReAct framework, the agents reason about the architecture rather than just reading files. It generates interactive diagrams and a full codebase overview.</p>
+          <p>This tool turns source code into technical documentation. Mistral agents built on the ReAct framework map the logic and dependencies across files to work out the architecture, then generate interactive diagrams and an overview of the whole codebase.</p>
           <ul class="bullets">
             <li>Modular setup with specialized Analyzer, Architect, and Synthesizer agents.</li>
             <li>Custom tools for code parsing and graph analysis integrated with LLM reasoning.</li>
-            <li>A 5-step workflow covering file extraction, mapping, and final synthesis.</li>
-            <li>Support for Python, C, C++, COBOL, Fortran and Rust with a real-time display of agent thoughts.</li>
+            <li>A five-step workflow that runs from file extraction and mapping through to synthesis.</li>
+            <li>Supports Python, C, C++, COBOL, Fortran, and Rust, and shows the agents' reasoning live as they work.</li>
           </ul>
           <div class="links">
             <a href="https://github.com/mathis-dumont/documentation_generator" target="_blank" rel="noopener noreferrer">Code →</a>
@@ -56,7 +56,7 @@
           <iframe
             class="embed"
             src="https://www.youtube-nocookie.com/embed/O5LUEzxQzFA"
-            title="Multi-Agent Documentation System — demo"
+            title="Multi-Agent Documentation System demo"
             loading="lazy"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
@@ -65,9 +65,9 @@
         <article class="entry">
           <h2>Insurance Churn Prediction</h2>
           <p class="subtitle">Alptis, year-long client project via Institut Polytechnique de Paris</p>
-          <p>Alptis is a French welfare insurance broker. The work consisted of forecasting which policyholders would leave within six months, early enough for retention teams to act.</p>
+          <p>Alptis is a French welfare insurance broker. The goal was to predict which policyholders would leave within six months, early enough for retention teams to step in.</p>
           <ul class="bullets">
-            <li>Merged structured records, consumption, unpaid bills, CRM history, with unstructured emails and claims.</li>
+            <li>Merged structured records (consumption, unpaid bills, CRM history) with unstructured emails and claims.</li>
             <li>Pulled churn signals out of customer correspondence using Hugging Face models for information extraction.</li>
             <li>Structured the whole pipeline as object-oriented Python, from ingestion through to a six-month churn score.</li>
           </ul>
@@ -77,7 +77,7 @@
 
         <article class="entry">
           <h2>Steam Review Generation: LoRA vs. Prompt Engineering</h2>
-          <p>I compared how small LLMs like TinyLlama 1.1B handle text generation. I tested zero-shot, prompt engineering, and LoRA fine-tuning. The results showed that complex prompts increase hallucinations in small models. Fine-tuning improved accuracy by 34% over prompting.</p>
+          <p>I compared three ways of getting small LLMs like TinyLlama 1.1B to write Steam reviews: zero-shot, prompt engineering, and LoRA fine-tuning. Complex prompts made the small models hallucinate more, and fine-tuning was 34% more accurate than prompting.</p>
           <ul class="bullets">
             <li>Built a validation system using SBERT and Mistral to judge review quality.</li>
             <li>Found that rigid prompts doubled the hallucination rate compared to fine-tuning.</li>
@@ -98,7 +98,7 @@
           </summary>
           <article class="entry">
             <h2>Horse Racing Prediction Platform</h2>
-            <p>This platform automates the lifecycle of horse racing predictions. It handles daily data scraping and generates bet recommendations. The system uses XGBoost to find value bets by comparing model probabilities against market odds.</p>
+            <p>This platform scrapes race data every day, predicts outcomes with XGBoost, and recommends value bets wherever the model's probabilities disagree with the market odds.</p>
             <ul class="bullets">
               <li>Automated ETL tasks via GitHub Actions to keep the Supabase database updated.</li>
               <li>Algorithmic betting module that identifies discrepancies in bookmaker odds.</li>
@@ -113,7 +113,7 @@
 
           <article class="entry">
             <h2>Multimodal RAG System</h2>
-            <p>This RAG system processes technical documents with both text and images. It uses Mistral Vision to describe charts, making them searchable via text queries. It features semantic chunking and incremental indexing to keep the knowledge base current.</p>
+            <p>This RAG system works on technical documents that mix text and images. Mistral Vision describes the charts so text queries can find them, and incremental indexing keeps the knowledge base current without rebuilding it.</p>
             <ul class="bullets">
               <li>Integrated Mistral Vision to caption visual data for semantic retrieval.</li>
               <li>Used spaCy-based semantic chunking to preserve context in retrieved segments.</li>
@@ -134,12 +134,12 @@
 
         <article class="entry">
           <h3>Fraud Detection in Imbalanced Datasets</h3>
-          <p>This project analyzed credit card fraud detection on a dataset with 0.17% fraud. I compared XGBoost against unsupervised Autoencoders. The study focused on the financial cost of missing fraudulent transactions rather than just accuracy.</p>
+          <p>I compared XGBoost with unsupervised autoencoders for credit card fraud detection, on a dataset where only 0.17% of transactions are fraudulent. Instead of accuracy, I scored the models on what missed frauds actually cost.</p>
           <ul class="bullets">
             <li>Benchmarked Logistic Regression, XGBoost, and Autoencoders on skewed data.</li>
             <li>Implemented cost-sensitive thresholding to prioritize financial impact.</li>
             <li>Used reconstruction-based scoring with Autoencoders to detect zero-day anomalies.</li>
-            <li>Authored a technical report on model trade-offs and economic utility.</li>
+            <li>Wrote a technical report on model trade-offs and economic utility.</li>
           </ul>
           <div class="links">
             <a href="/documents/fraud-detection-report.pdf" target="_blank" rel="noopener noreferrer">Paper →</a>
@@ -149,12 +149,11 @@
 
         <article class="entry">
           <h3>IoT Smart Beehive System</h3>
-          <p class="award">2nd Prize — 12th Trinational Students' Congress of Natural Sciences &amp; Technology, Freiburg</p>
-          <p>I built an IoT system to monitor beehive health in real-time. It tracks temperature, humidity, and weight to detect swarming events. The system uses LoRaWAN for long-range communication in rural environments without WiFi.</p>
+          <p class="award">2nd Prize, 12th Trinational Students' Congress of Natural Sciences &amp; Technology, Freiburg</p>
+          <p>I built an IoT system that monitors beehives in real time. It tracks temperature, humidity, and weight, and flags swarming events. Data goes over LoRaWAN, since the hives sit in rural areas without WiFi.</p>
           <ul class="bullets">
             <li>Integrated hardware sensors with an ESP8266 to collect environmental data.</li>
             <li>Built logic to identify swarming based on sudden mass changes in the hive.</li>
-            <li>Used LoRaWAN for reliable data transmission in remote areas.</li>
           </ul>
           <ul class="tags"><li>IoT</li><li>Embedded Systems</li><li>ESP8266</li><li>LoRaWAN</li><li>Sensors</li><li>Remote Monitoring</li></ul>
         </article>
@@ -166,7 +165,7 @@
           </summary>
           <article class="entry">
             <h3>Adversarial Robustness in Traffic Sign Recognition</h3>
-            <p>This study measures how far traffic sign classifiers can be pushed before they break. CNN, MLP, and VAE-based models are attacked with FGSM and PGD on the GTSRB benchmark, then defended three ways: feature squeezing, VAE input purification, and adversarial training. It is a direct read on the trade-off between clean accuracy and robustness.</p>
+            <p>We tested how far traffic sign classifiers can be pushed before they break. On the GTSRB benchmark, we attacked CNN, MLP, and VAE-based models with FGSM and PGD, then tried three defenses (feature squeezing, VAE input purification, and adversarial training) and compared the robustness each one buys against the clean accuracy it costs.</p>
             <ul class="bullets">
               <li>CNNs beat MLPs on clean data, yet proved just as vulnerable to gradient-based attacks.</li>
               <li>Caught gradient masking in the VAE classifier: robust against transfer attacks, collapsing under white-box access.</li>
